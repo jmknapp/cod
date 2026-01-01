@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_4eed8fa4a265ca44b77fc27e789e0895 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.2/leaflet.draw.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.2/leaflet.draw.css"/>
+</head>
+<body>
+    
+    
+    <script>
+    var coordinates = [];
+    var currentPolygon = null;
+    
+    function addPoint(lat, lng) {
+        coordinates.push([lat, lng]);
+        console.log('Point added:', lat.toFixed(6), lng.toFixed(6));
+        console.log('Current polygon:', JSON.stringify(coordinates));
+    }
+    
+    function clearPolygon() {
+        coordinates = [];
+        console.log('Polygon cleared');
+    }
+    
+    function finishPolygon() {
+        console.log('='.repeat(70));
+        console.log('FINISHED POLYGON - Copy these coordinates:');
+        console.log('Python format (lat, lon):');
+        var python_coords = coordinates.map(c => '    (' + c[0].toFixed(6) + ', ' + c[1].toFixed(6) + ')').join(',\n');
+        console.log('[\n' + python_coords + '\n]');
+        console.log('='.repeat(70));
+        clearPolygon();
+    }
+    
+    // Add keyboard shortcuts
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'c' || e.key === 'C') {
+            clearPolygon();
+        } else if (e.key === 'f' || e.key === 'F') {
+            finishPolygon();
+        }
+    });
+    
+    console.log('DIGITIZING TOOL READY');
+    console.log('Instructions:');
+    console.log('1. Use polygon tool to trace feature');
+    console.log('2. Click points around boundary');
+    console.log('3. Double-click to finish polygon');
+    console.log('4. Check console for coordinates');
+    console.log('5. Press C to clear, F to finish');
+    </script>
+    
+    
+            <div class="folium-map" id="map_4eed8fa4a265ca44b77fc27e789e0895" ></div>
+        
+    
+            
+            <style>
+                #export {
+                    position: absolute;
+                    top: 5px;
+                    right: 10px;
+                    z-index: 999;
+                    background: white;
+                    color: black;
+                    padding: 6px;
+                    border-radius: 4px;
+                    font-family: 'Helvetica Neue';
+                    cursor: pointer;
+                    font-size: 12px;
+                    text-decoration: none;
+                    top: 90px;
+                }
+            </style>
+            <a href='#' id='export'>Export</a>
+            
+        
+</body>
+<script>
+    
+    
+            var map_4eed8fa4a265ca44b77fc27e789e0895 = L.map(
+                "map_4eed8fa4a265ca44b77fc27e789e0895",
+                {
+                    center: [12.0, 115.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 6,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_a1bb4a24ed7521058c026585b46ef9f7 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_a1bb4a24ed7521058c026585b46ef9f7.addTo(map_4eed8fa4a265ca44b77fc27e789e0895);
+        
+    
+            var tile_layer_9efe13c02553e497755d4dabcac08b11 = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Esri",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_9efe13c02553e497755d4dabcac08b11.addTo(map_4eed8fa4a265ca44b77fc27e789e0895);
+        
+    
+            var tile_layer_b9b589e092b20d680964b4e071a7724f = L.tileLayer(
+                "https://gis.ngdc.noaa.gov/arcgis/rest/services/web_mercator/gebco_2020/MapServer/tile/{z}/{y}/{x}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "GEBCO/NOAA",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_b9b589e092b20d680964b4e071a7724f.addTo(map_4eed8fa4a265ca44b77fc27e789e0895);
+        
+    
+            var options = {
+              position: "topleft",
+              draw: {"circle": false, "circlemarker": false, "marker": false, "polygon": {"allowIntersection": false, "drawError": {"color": "#e1e100", "message": "\u003cstrong\u003eError:\u003c/strong\u003e shape edges cannot cross!"}, "shapeOptions": {"color": "#d4a373", "fillOpacity": 0.3, "weight": 2}}, "polyline": false, "rectangle": false},
+              edit: {},
+            }
+                // FeatureGroup is to store editable layers.
+                var drawnItems_draw_control_80b010fef5666f54444b84609b1c840c =
+                    new L.featureGroup().addTo(
+                        map_4eed8fa4a265ca44b77fc27e789e0895
+                    );
+
+            options.edit.featureGroup = drawnItems_draw_control_80b010fef5666f54444b84609b1c840c;
+            var draw_control_80b010fef5666f54444b84609b1c840c = new L.Control.Draw(
+                options
+            ).addTo( map_4eed8fa4a265ca44b77fc27e789e0895 );
+            map_4eed8fa4a265ca44b77fc27e789e0895.on(L.Draw.Event.CREATED, function(e) {
+                var layer = e.layer,
+                    type = e.layerType;
+                var coords = JSON.stringify(layer.toGeoJSON());
+                layer.on('click', function() {
+                    alert(coords);
+                    console.log(coords);
+                });
+                drawnItems_draw_control_80b010fef5666f54444b84609b1c840c.addLayer(layer);
+            });
+            map_4eed8fa4a265ca44b77fc27e789e0895.on('draw:created', function(e) {
+                drawnItems_draw_control_80b010fef5666f54444b84609b1c840c.addLayer(e.layer);
+            });
+
+            
+            document.getElementById('export').onclick = function(e) {
+                var data = drawnItems_draw_control_80b010fef5666f54444b84609b1c840c.toGeoJSON();
+                var convertedData = 'text/json;charset=utf-8,'
+                    + encodeURIComponent(JSON.stringify(data));
+                document.getElementById('export').setAttribute(
+                    'href', 'data:' + convertedData
+                );
+                document.getElementById('export').setAttribute(
+                    'download', "digitized_features.geojson"
+                );
+            }
+            
+        
+    
+            var marker_3309b3e4e7df3ef50ec7f7c313428d45 = L.marker(
+                [16.0, 114.8],
+                {
+}
+            ).addTo(map_4eed8fa4a265ca44b77fc27e789e0895);
+        
+    
+            var icon_943504ed3a9198a3c97a8e1de2675aa1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f8dbeffaf9c976bffbd7ea734bdd6af8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4605965f842841fb5617c7060b24c19f = $(`<div id="html_4605965f842841fb5617c7060b24c19f" style="width: 100.0%; height: 100.0%;">Macclesfield Bank (center)</div>`)[0];
+                popup_f8dbeffaf9c976bffbd7ea734bdd6af8.setContent(html_4605965f842841fb5617c7060b24c19f);
+            
+        
+
+        marker_3309b3e4e7df3ef50ec7f7c313428d45.bindPopup(popup_f8dbeffaf9c976bffbd7ea734bdd6af8)
+        ;
+
+        
+    
+    
+            marker_3309b3e4e7df3ef50ec7f7c313428d45.bindTooltip(
+                `<div>
+                     Macclesfield Bank (center)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3309b3e4e7df3ef50ec7f7c313428d45.setIcon(icon_943504ed3a9198a3c97a8e1de2675aa1);
+            
+    
+            var marker_dbe74c8765e30a312298e97b19c4de86 = L.marker(
+                [9.5, 115.0],
+                {
+}
+            ).addTo(map_4eed8fa4a265ca44b77fc27e789e0895);
+        
+    
+            var icon_b244cb8ec313a470e8a50a9b3a79f6ec = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1eb8757b0ec38be764454fece4265707 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d24c9882cb7da0625f9b9f5fcb8859c8 = $(`<div id="html_d24c9882cb7da0625f9b9f5fcb8859c8" style="width: 100.0%; height: 100.0%;">Dangerous Ground (center)</div>`)[0];
+                popup_1eb8757b0ec38be764454fece4265707.setContent(html_d24c9882cb7da0625f9b9f5fcb8859c8);
+            
+        
+
+        marker_dbe74c8765e30a312298e97b19c4de86.bindPopup(popup_1eb8757b0ec38be764454fece4265707)
+        ;
+
+        
+    
+    
+            marker_dbe74c8765e30a312298e97b19c4de86.bindTooltip(
+                `<div>
+                     Dangerous Ground (center)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_dbe74c8765e30a312298e97b19c4de86.setIcon(icon_b244cb8ec313a470e8a50a9b3a79f6ec);
+            
+    
+            var marker_e135536955dbcc8ac80a66c79d024a43 = L.marker(
+                [16.5, 112.0],
+                {
+}
+            ).addTo(map_4eed8fa4a265ca44b77fc27e789e0895);
+        
+    
+            var icon_afd82493a33cc621c187e3a6fa1669af = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_12a267af1672f4187a80fa470c4b3883 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_84ae62df8d0ffa3d2840440c80f6b08b = $(`<div id="html_84ae62df8d0ffa3d2840440c80f6b08b" style="width: 100.0%; height: 100.0%;">Paracel Islands (center)</div>`)[0];
+                popup_12a267af1672f4187a80fa470c4b3883.setContent(html_84ae62df8d0ffa3d2840440c80f6b08b);
+            
+        
+
+        marker_e135536955dbcc8ac80a66c79d024a43.bindPopup(popup_12a267af1672f4187a80fa470c4b3883)
+        ;
+
+        
+    
+    
+            marker_e135536955dbcc8ac80a66c79d024a43.bindTooltip(
+                `<div>
+                     Paracel Islands (center)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e135536955dbcc8ac80a66c79d024a43.setIcon(icon_afd82493a33cc621c187e3a6fa1669af);
+            
+    
+            var marker_b3bd0392afb7bfd5f18775af88e75f29 = L.marker(
+                [11.0, 116.5],
+                {
+}
+            ).addTo(map_4eed8fa4a265ca44b77fc27e789e0895);
+        
+    
+            var icon_ae4146d30f99595d53f8bb1077b11694 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_853798cfa1d245b668c863c18d2986d7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fd4d541d51ecbe03f4f4ff78d85b0f59 = $(`<div id="html_fd4d541d51ecbe03f4f4ff78d85b0f59" style="width: 100.0%; height: 100.0%;">Reed Bank (center)</div>`)[0];
+                popup_853798cfa1d245b668c863c18d2986d7.setContent(html_fd4d541d51ecbe03f4f4ff78d85b0f59);
+            
+        
+
+        marker_b3bd0392afb7bfd5f18775af88e75f29.bindPopup(popup_853798cfa1d245b668c863c18d2986d7)
+        ;
+
+        
+    
+    
+            marker_b3bd0392afb7bfd5f18775af88e75f29.bindTooltip(
+                `<div>
+                     Reed Bank (center)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b3bd0392afb7bfd5f18775af88e75f29.setIcon(icon_ae4146d30f99595d53f8bb1077b11694);
+            
+    
+            var layer_control_74a524ba78587687c78abe9d06353ea0_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_a1bb4a24ed7521058c026585b46ef9f7,
+                    "Satellite" : tile_layer_9efe13c02553e497755d4dabcac08b11,
+                },
+                overlays :  {
+                    "Bathymetry" : tile_layer_b9b589e092b20d680964b4e071a7724f,
+                },
+            };
+            let layer_control_74a524ba78587687c78abe9d06353ea0 = L.control.layers(
+                layer_control_74a524ba78587687c78abe9d06353ea0_layers.base_layers,
+                layer_control_74a524ba78587687c78abe9d06353ea0_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_4eed8fa4a265ca44b77fc27e789e0895);
+
+        
+</script>
+</html>

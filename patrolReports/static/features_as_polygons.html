@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_d8b9d0796bf2a3b5dd32a5fc7567344d {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_d8b9d0796bf2a3b5dd32a5fc7567344d" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_d8b9d0796bf2a3b5dd32a5fc7567344d = L.map(
+                "map_d8b9d0796bf2a3b5dd32a5fc7567344d",
+                {
+                    center: [12.0, 115.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 6,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_8975308f0aeebaa26a98987169779c42 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_8975308f0aeebaa26a98987169779c42.addTo(map_d8b9d0796bf2a3b5dd32a5fc7567344d);
+        
+    
+            var polygon_9e1ea82e91d93e7f46a342b5c49efd50 = L.polygon(
+                [[15.75, 114.333], [16.0, 114.5], [16.4, 114.8], [16.75, 115.1], [16.7, 115.333], [16.3, 115.3], [15.9, 115.2], [15.75, 115.0], [15.75, 114.333]],
+                {"bubblingMouseEvents": true, "color": "#FFD700", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFD700", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_d8b9d0796bf2a3b5dd32a5fc7567344d);
+        
+    
+        var popup_8dafba80d3f5eb142b38245c9e3e84ed = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_ce27e6eef86706bfe0eeaa0f8317e26e = $(`<div id="html_ce27e6eef86706bfe0eeaa0f8317e26e" style="width: 100.0%; height: 100.0%;"><b>Macclesfield Bank</b><br>Elongated submerged atoll, 130 km long x 70 km wide. Entirely underwater with depths of 11-100 meters. Dangerous to navigation.<br><span style='color:#FFD700;'>⚠ Hazard: Unknown</span></div>`)[0];
+                popup_8dafba80d3f5eb142b38245c9e3e84ed.setContent(html_ce27e6eef86706bfe0eeaa0f8317e26e);
+            
+        
+
+        polygon_9e1ea82e91d93e7f46a342b5c49efd50.bindPopup(popup_8dafba80d3f5eb142b38245c9e3e84ed)
+        ;
+
+        
+    
+    
+            polygon_9e1ea82e91d93e7f46a342b5c49efd50.bindTooltip(
+                `<div>
+                     Macclesfield Bank (Unknown hazard)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var polygon_98045a0766ccdd330c8ae15aaa89c0d7 = L.polygon(
+                [[7.5, 113.0], [12.0, 113.0], [12.0, 117.0], [7.5, 117.0], [7.5, 113.0]],
+                {"bubblingMouseEvents": true, "color": "#FFD700", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFD700", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_d8b9d0796bf2a3b5dd32a5fc7567344d);
+        
+    
+        var popup_e16cb6350f923e6bc407e73886566b06 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_9ae40803d030016a7ca5c9074c0809b0 = $(`<div id="html_9ae40803d030016a7ca5c9074c0809b0" style="width: 100.0%; height: 100.0%;"><b>Dangerous Ground (Spratly Area)</b><br>Large area with numerous low islands, cays, sunken reefs, and atolls. Poorly charted. Reefs rise abruptly from depths >1000m.<br><span style='color:#FFD700;'>⚠ Hazard: Unknown</span></div>`)[0];
+                popup_e16cb6350f923e6bc407e73886566b06.setContent(html_9ae40803d030016a7ca5c9074c0809b0);
+            
+        
+
+        polygon_98045a0766ccdd330c8ae15aaa89c0d7.bindPopup(popup_e16cb6350f923e6bc407e73886566b06)
+        ;
+
+        
+    
+    
+            polygon_98045a0766ccdd330c8ae15aaa89c0d7.bindTooltip(
+                `<div>
+                     Dangerous Ground (Spratly Area) (Unknown hazard)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var polygon_c3fa28ae3bfc4cb57cc75082d6a6b18f = L.polygon(
+                [[15.5, 111.0], [17.2, 111.0], [17.2, 112.8], [15.5, 112.8], [15.5, 111.0]],
+                {"bubblingMouseEvents": true, "color": "#FFD700", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFD700", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_d8b9d0796bf2a3b5dd32a5fc7567344d);
+        
+    
+        var popup_f36ddbe337513460d853f396275ee420 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_31ffe0352f52ae2cdfd777c69fb4c209 = $(`<div id="html_31ffe0352f52ae2cdfd777c69fb4c209" style="width: 100.0%; height: 100.0%;"><b>Paracel Islands (Xisha Islands)</b><br>Group of islands, reefs, banks and shoals. Strategic area during WWII.<br><span style='color:#FFD700;'>⚠ Hazard: Unknown</span></div>`)[0];
+                popup_f36ddbe337513460d853f396275ee420.setContent(html_31ffe0352f52ae2cdfd777c69fb4c209);
+            
+        
+
+        polygon_c3fa28ae3bfc4cb57cc75082d6a6b18f.bindPopup(popup_f36ddbe337513460d853f396275ee420)
+        ;
+
+        
+    
+    
+            polygon_c3fa28ae3bfc4cb57cc75082d6a6b18f.bindTooltip(
+                `<div>
+                     Paracel Islands (Xisha Islands) (Unknown hazard)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var polygon_118ee72999c6dd26b3fbdb47c15cd57e = L.polygon(
+                [[10.5, 116.0], [11.8, 116.0], [11.8, 117.5], [10.5, 117.5], [10.5, 116.0]],
+                {"bubblingMouseEvents": true, "color": "#FFD700", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFD700", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_d8b9d0796bf2a3b5dd32a5fc7567344d);
+        
+    
+        var popup_7714673b36feae78675ceac8a340e6fa = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_31d5bf417fc34e7e268e3275419fe6ea = $(`<div id="html_31d5bf417fc34e7e268e3275419fe6ea" style="width: 100.0%; height: 100.0%;"><b>Reed Bank (Recto Bank)</b><br>Large tablemount in the Spratly Islands area. Shallow waters.<br><span style='color:#FFD700;'>⚠ Hazard: Unknown</span></div>`)[0];
+                popup_7714673b36feae78675ceac8a340e6fa.setContent(html_31d5bf417fc34e7e268e3275419fe6ea);
+            
+        
+
+        polygon_118ee72999c6dd26b3fbdb47c15cd57e.bindPopup(popup_7714673b36feae78675ceac8a340e6fa)
+        ;
+
+        
+    
+    
+            polygon_118ee72999c6dd26b3fbdb47c15cd57e.bindTooltip(
+                `<div>
+                     Reed Bank (Recto Bank) (Unknown hazard)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>

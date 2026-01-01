@@ -1,0 +1,12 @@
+# Robots.txt for USS Cobia Patrol Reports
+# https://codpatrols.com
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://codpatrols.com/static/sitemap.xml
+
+# Crawl-delay suggestion (optional)
+Crawl-delay: 1
+

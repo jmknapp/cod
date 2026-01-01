@@ -1,0 +1,115 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "luzon_strait",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [119.5, 20.0],
+          [119.5, 21.5],
+          [122.0, 21.5],
+          [122.0, 20.0],
+          [119.5, 20.0]
+        ]]
+      },
+      "properties": {
+        "name": "Luzon Strait",
+        "type": "strategic_waterway",
+        "description": "Critical passage between South China Sea and Pacific Ocean. Major chokepoint.",
+        "strategic_value": "critical",
+        "historical_note": "Heavily patrolled by US submarines. Major convoy interdiction area 1942-1945."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "balabac_strait",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [116.8, 7.5],
+          [116.8, 8.2],
+          [117.3, 8.2],
+          [117.3, 7.5],
+          [116.8, 7.5]
+        ]]
+      },
+      "properties": {
+        "name": "Balabac Strait",
+        "type": "strategic_waterway",
+        "description": "Narrow passage between Palawan and Borneo. Gateway to Sulu Sea.",
+        "strategic_value": "high",
+        "historical_note": "Patrol area for submarines targeting traffic between Singapore and Manila"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "mindoro_strait",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [120.5, 12.5],
+          [120.5, 13.5],
+          [121.5, 13.5],
+          [121.5, 12.5],
+          [120.5, 12.5]
+        ]]
+      },
+      "properties": {
+        "name": "Mindoro Strait (Verde Island Passage)",
+        "type": "strategic_waterway",
+        "description": "Passage between Mindoro and Luzon. Approach to Manila Bay.",
+        "strategic_value": "high",
+        "historical_note": "Approach to Manila. Heavy Japanese traffic."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "camranh_bay",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [109.18, 11.92]
+      },
+      "properties": {
+        "name": "Cam Ranh Bay",
+        "type": "naval_base",
+        "description": "Major Japanese fleet anchorage and naval base on Vietnamese coast.",
+        "strategic_value": "critical",
+        "historical_note": "Primary Japanese fleet base in South China Sea. Major target for Allied submarines and aircraft."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "manila_bay",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [120.95, 14.58]
+      },
+      "properties": {
+        "name": "Manila Bay",
+        "type": "naval_base",
+        "description": "Major port and naval facility. Japanese-occupied 1942-1945.",
+        "strategic_value": "critical",
+        "historical_note": "Major Japanese supply hub. Liberation target 1945."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "subic_bay",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [120.27, 14.80]
+      },
+      "properties": {
+        "name": "Subic Bay",
+        "type": "naval_base",
+        "description": "Former US naval base, occupied by Japan 1942-1945.",
+        "strategic_value": "high",
+        "historical_note": "Japanese naval facility during occupation"
+      }
+    }
+  ]
+}
+
+

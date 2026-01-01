@@ -1,0 +1,1653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patrol Summaries - USS Cod (SS-224) War Patrol Reports Archive</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Narrative summaries of USS Cod's seven WWII war patrols. Read about torpedo attacks, convoy battles, the historic O-19 rescue, and life aboard a combat submarine.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://codpatrols.com/patrolsummaries">
+    
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="USS Cod Patrol Summaries - Seven War Patrols">
+    <meta property="og:description" content="Detailed narratives of USS Cod's combat patrols in the Pacific, 1943-1945. Torpedo attacks, convoy battles, and the historic rescue of Dutch submarine O-19.">
+    <meta property="og:image" content="https://codpatrols.com/static/codpatch.png">
+    
+    <link rel="icon" type="image/png" href="/static/codpatch.png">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:wght@400;600&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy-dark: #0a1628;
+            --navy-mid: #1a2a44;
+            --navy-light: #2d4a6f;
+            --brass: #c9a227;
+            --brass-light: #e8c547;
+            --sea-foam: #7fcdcd;
+            --cream: #f5f0e1;
+            --text-light: #e8e4d9;
+            --text-muted: #8a9bb4;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            background: var(--navy-dark);
+            color: var(--text-light);
+            min-height: 100vh;
+            line-height: 1.7;
+            background-image: 
+                radial-gradient(ellipse at 20% 80%, rgba(45, 74, 111, 0.3) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 20%, rgba(127, 205, 205, 0.1) 0%, transparent 40%),
+                linear-gradient(180deg, var(--navy-dark) 0%, #0d1f35 100%);
+            background-attachment: fixed;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        header {
+            text-align: center;
+            padding: 1.5rem 0 2rem;
+            border-bottom: 1px solid var(--navy-light);
+            margin-bottom: 2rem;
+        }
+        
+        .back-link {
+            display: inline-block;
+            color: var(--brass);
+            text-decoration: none;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+        
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--cream);
+            margin-bottom: 0.5rem;
+        }
+        
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+        
+        .patrol-nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .patrol-nav a {
+            padding: 0.5rem 1rem;
+            background: var(--navy-mid);
+            border: 1px solid var(--navy-light);
+            border-radius: 4px;
+            color: var(--sea-foam);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+        
+        .patrol-nav a:hover {
+            background: var(--navy-light);
+            color: var(--brass-light);
+        }
+        
+        section {
+            background: var(--navy-mid);
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--navy-light);
+        }
+        
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: var(--brass-light);
+            margin-bottom: 0.5rem;
+        }
+        
+        .patrol-dates {
+            color: var(--sea-foam);
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid var(--navy-light);
+        }
+        
+        h3 {
+            font-size: 1.15rem;
+            color: var(--sea-foam);
+            margin: 1.5rem 0 0.75rem;
+        }
+        
+        h3:first-of-type {
+            margin-top: 0.5rem;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+            color: var(--text-light);
+        }
+        
+        ul, ol {
+            margin: 1rem 0 1rem 1.5rem;
+        }
+        
+        li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .highlight {
+            background: var(--navy-dark);
+            padding: 1rem 1.25rem;
+            border-radius: 6px;
+            border-left: 3px solid var(--brass);
+            margin: 1rem 0;
+        }
+        
+        .highlight.success {
+            border-left-color: #4daf4a;
+        }
+        
+        .highlight.danger {
+            border-left-color: #c0392b;
+        }
+        
+        .highlight.info {
+            border-left-color: var(--sea-foam);
+        }
+        
+        strong {
+            color: var(--cream);
+        }
+        
+        em {
+            color: var(--text-muted);
+        }
+        
+        a {
+            color: var(--sea-foam);
+        }
+        
+        a:hover {
+            color: var(--brass-light);
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid var(--navy-light);
+            margin: 2rem 0;
+        }
+        
+        /* Statistics Table */
+        .stats-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+        
+        .stats-table th {
+            background: var(--navy-dark);
+            color: var(--brass-light);
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 0.05em;
+            padding: 1rem;
+            text-align: center;
+            border-bottom: 2px solid var(--navy-light);
+        }
+        
+        .stats-table td {
+            padding: 0.85rem 1rem;
+            text-align: center;
+            border-bottom: 1px solid var(--navy-light);
+            color: var(--text-light);
+        }
+        
+        .stats-table tr:hover td {
+            background: rgba(45, 74, 111, 0.3);
+        }
+        
+        .stats-table td:first-child {
+            font-weight: 600;
+            color: var(--cream);
+        }
+        
+        .stats-table .kia {
+            color: #e74c3c;
+        }
+        
+        .co-list {
+            list-style: none;
+            margin: 1rem 0 0 0;
+            padding: 0;
+        }
+        
+        .co-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--navy-light);
+        }
+        
+        .co-list li:last-child {
+            border-bottom: none;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--navy-light);
+            margin-top: 2rem;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            h2 {
+                font-size: 1.4rem;
+            }
+            
+            section {
+                padding: 1.5rem;
+            }
+            
+            .patrol-nav a {
+                padding: 0.4rem 0.8rem;
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="/" class="back-link">← Back to Search</a>
+            <h1>Patrol Summaries</h1>
+            <p class="subtitle">USS Cod (SS-224) — Seven War Patrols, 1943–1945</p>
+            
+            <nav class="patrol-nav">
+                <a href="#patrol1">Patrol 1</a>
+                <a href="#patrol2">Patrol 2</a>
+                <a href="#patrol3">Patrol 3</a>
+                <a href="#patrol4">Patrol 4</a>
+                <a href="#patrol5">Patrol 5</a>
+                <a href="#patrol6">Patrol 6</a>
+                <a href="#patrol7">Patrol 7</a>
+                <a href="#statistics">Statistics</a>
+            </nav>
+        </header>
+        
+        <!-- PATROL 1 -->
+        <section id="patrol1">
+            <h2>First War Patrol</h2>
+            <div class="patrol-dates">October 14 – December 16, 1943 | South China Sea (from Fremantle)</div>
+            
+            <p>
+                USS Cod's maiden war patrol, under Commander J.C. Dempsey, was a 63-day voyage into the South China Sea 
+                that established the crew's combat readiness through careful patrolling and their first successful attack.
+            </p>
+            
+            <h3>First Contact: Arrival at a Torpedoed Tanker</h3>
+            <p>
+                On <strong>November 8, 1943</strong>, at 0405, Cod heard a series of 12 explosions ahead while patrolling 
+                near Macclesfield Bank. When they closed to investigate, they found a <strong>burning tanker</strong> 
+                already torpedoed by another submarine, blazing so intensely that details were indiscernible. 
+                A Chidori-class escort was circling, echo-ranging. The tanker exploded violently at 0653 and sank—Cod 
+                had witnessed another sub's handiwork.
+            </p>
+            
+            <h3>The First Attack: Convoy in Palawan Passage (November 29)</h3>
+            <p>
+                Cod's first true attack came on <strong>November 29</strong> at dawn in the Palawan Passage. In poor 
+                visibility with rain squalls, the crew sighted a convoy of 4 ships (1 tanker, 2 freighters, 1 transport) 
+                escorted by a Minekaze-class destroyer.
+            </p>
+            <p>
+                At 0621, Commander Dempsey fired 6 torpedoes at the AK (cargo ship) and AP (transport):
+            </p>
+            <ul>
+                <li><strong>Two hits</strong> observed on the AK between the stack and after mast; the ship began listing and settling</li>
+                <li><strong>One hit</strong> on the AP abaft the stack</li>
+                <li>One torpedo suffered a <strong>premature explosion</strong>, which alerted a nearby aircraft that bombed the periscope's wake</li>
+            </ul>
+            <p>
+                The escort dropped depth charges (none closer than 400 yards). Sound reported the distinct crackling 
+                and groaning of a <strong>ship breaking up</strong>. The AK was later assessed as sunk.
+            </p>
+            
+            <h3>Returning with Engine Troubles</h3>
+            <p>
+                The patrol was cut short due to deteriorating main engine exhaust valves. Cod returned to Fremantle 
+                on December 16, 1943, having established herself as a combat-ready boat with a confirmed sinking.
+            </p>
+        </section>
+        
+        <!-- PATROL 2 -->
+        <section id="patrol2">
+            <h2>Second War Patrol</h2>
+            <div class="patrol-dates">January 11 – March 13, 1944 | South China Sea & Indo-China Coast</div>
+            
+            <p>
+                Departing <strong>Fremantle on January 11, 1944</strong>, Cod's second patrol was marked by 
+                frustration, illness, and a maddeningly elusive convoy that the crew chased for days without 
+                firing a shot.
+            </p>
+            
+            <h3>Mass Illness: Carbon Tetrachloride Poisoning (January 28)</h3>
+            <div class="highlight danger">
+                On <strong>January 28</strong>, after an all-day submerged dive off the Indo-China coast, crew members 
+                began complaining of headaches, nausea, and dizziness. Initially, the symptoms were attributed to 
+                elevated CO₂ levels (measured at 1.5%). But after surfacing, a search revealed the true culprit: 
+                a <strong>partially used and improperly sealed 5-gallon can of carbon tetrachloride</strong>—a 
+                common cleaning solvent whose fumes are highly toxic in enclosed spaces.
+            </div>
+            <p>
+                Upon surfacing, half the crew was already nauseated and many started vomiting. Within an hour, 
+                <strong>practically the entire crew</strong> exhibited symptoms: cramps, dizziness, nausea, vomiting, 
+                weak pulse, and subnormal temperature. About half recovered during the night's surface operations; 
+                the rest took two more days. Some cases lasted as long as <strong>five days</strong>. The debilitated 
+                crew would soon face a convoy they couldn't catch.
+            </p>
+            
+            <h3>The Convoy Chase That Got Away (January 29–30)</h3>
+            <p>
+                On <strong>January 29</strong>, Cod sighted a northbound convoy—1 tanker, 2 freighters, and 2-3 escorts—close 
+                to the Indo-China coast. The crew began a grueling <strong>all-night surface chase</strong>, attempting to 
+                get ahead for a night attack.
+            </p>
+            <p>
+                Despite multiple approach attempts, everything went wrong: visual bearings didn't match the TDC setup, 
+                enemy zigs placed them too close or too far from track, and the nearly-incapacitated crew struggled to perform.
+            </p>
+            <p>
+                Commander Dempsey wrote in his report that the officers and crew "performed their duties to the best 
+                of their abilities" but accepted "full responsibility for this fiasco." The convoy escaped toward 
+                Tourane Bay at dawn, never to be seen again.
+            </p>
+            
+            <h3>Gun Action: The Rising Sun Sampan (February 16)</h3>
+            <p>
+                In a rare surface engagement, Cod encountered a <strong>power-driven sampan</strong> with the Rising Sun 
+                painted on its deck house, 160 miles from land. When the sampan either opened fire with small arms or 
+                began signaling, Cod's gun crews <strong>set it ablaze and blew it apart</strong> with 4-inch and 20mm fire.
+            </p>
+            
+            <h3>Successful Night Attack: The Zuiyo Maru (February 23)</h3>
+            <p>
+                After weeks of frustration, Cod finally scored on <strong>February 23</strong> northeast of Morotai Island. 
+                At 0524, lookouts sighted smoke and a mast—a large <strong>Zuiyo Maru-type tanker</strong> (~7,360 tons) 
+                escorted by a smaller maru and a subchaser echo-ranging on 17 KCS. Cod tracked submerged through 
+                daylight, surfaced at 1120, and chased until nightfall.
+            </p>
+            <p>
+                At 2218, Cod closed to 2,300 yards and fired a spread of four torpedoes at the tanker:
+            </p>
+            <ul>
+                <li>The <strong>first torpedo swerved 20-30° left</strong> and prematured after 25 seconds</li>
+                <li>The <strong>second hit under the mainmast</strong> with a flash that "lighted the horizon"</li>
+                <li>The <strong>third hit under the stack</strong> with an even greater flash—the ship broke in half</li>
+                <li>All parts burst into flames; the ship <strong>disappeared in two minutes</strong></li>
+            </ul>
+            <div class="highlight success">
+                From the character of the explosions and the rapidity with which the ship blew up, Commander Dempsey 
+                concluded the cargo must have been <strong>gasoline or fuel oil</strong>. Two additional torpedoes 
+                fired at the escort maru missed—the depths were set for a larger ship.
+            </div>
+            
+            <h3>Attack Under Fire (February 27)</h3>
+            <p>
+                Four days later, off <strong>South Loloda Island</strong> near Halmahera, Cod made radar contact 
+                at 12,000 yards on a large freighter hugging the coast with a small escort trailing 700-1,000 yards 
+                astern. The target appeared to be an MFM-type freighter of about <strong>5,000-6,000 tons</strong>.
+            </p>
+            <p>
+                At 0257, Cod closed to attack. But at 0258, with range 3,200 yards, the target began 
+                <strong>signaling to its escort</strong>—and both ships <strong>opened fire</strong> on the submarine. 
+                No splashes were seen, but Cod was now attacking under enemy gunfire.
+            </p>
+            <p>
+                Undeterred, at 0259 Commander Dempsey fired a spread of four torpedoes at 2,900 yards:
+            </p>
+            <ul>
+                <li>The <strong>first hit the stern</strong> with a violent explosion—a large portion appeared blown into the air</li>
+                <li>A large fire immediately broke out with much smoke</li>
+                <li>The <strong>second hit amidships</strong></li>
+                <li>Two minutes later, a second more violent explosion; flames died out and the target <strong>disappeared</strong></li>
+            </ul>
+            <p>
+                The radar pip vanished at 4,500 yards. The escort fired guns and dropped depth charges for 
+                20 minutes after the attack, but Cod slipped away.
+            </p>
+            
+            <h3>The One That Got Away: 100 Lookouts (February 29)</h3>
+            <p>
+                Two days later, near <strong>Buton Strait</strong>, Cod detected echo-ranging at an estimated 
+                24,000 yards—an hour before actually sighting the target. It proved to be a <strong>Yamazato 
+                Maru-type cargo ship</strong> escorted by a <strong>Terutsuki-class destroyer</strong>, one of 
+                Japan's most capable anti-submarine vessels.
+            </p>
+            <p>
+                As Cod maneuvered for a stern tube shot, the crew observed an unusual sight: <strong>at least 
+                100 Japanese sailors lining the destroyer's rails</strong>, apparently serving as periscope 
+                lookouts. The Japanese were learning.
+            </p>
+            <p>
+                At 1449, Cod fired three torpedoes—but the gyro regulator had tripped out a minute before firing, 
+                forcing the crew to match gyros by hand. A fourth torpedo couldn't fire at all; its gyro spindle 
+                was frozen. Post-attack analysis revealed the gyro angles lagged 5-7 degrees behind the TDC 
+                settings, causing all torpedoes to miss astern. The Terutsuki dropped depth charges—close ones—but 
+                Cod escaped to fight another day.
+            </p>
+            <p>
+                Cod returned to <strong>Fremantle on March 13, 1944</strong>. With two confirmed sinkings 
+                despite the frustrations, Patrol 2 was deemed <strong>successful</strong>.
+            </p>
+        </section>
+        
+        <!-- PATROL 3 -->
+        <section id="patrol3">
+            <h2>Third War Patrol</h2>
+            <div class="patrol-dates">April 6 – June 1, 1944 | Sulu Sea & West Coast of Luzon</div>
+            
+            <p>
+                Departing <strong>Fremantle on April 6, 1944</strong>, Cod's third patrol took her through the 
+                Celebes Sea and into the Sulu Sea, operating off the Zamboanga Peninsula and the dangerous 
+                shallows near Basilan Strait.
+            </p>
+            
+            <h3>Training with USS Jack</h3>
+            <p>
+                The patrol began with valuable mutual training exercises in company with <strong>USS Jack</strong> 
+                along the approach to Darwin. The submarines practiced surface and submerged approaches against 
+                each other, giving lookouts numerous opportunities to observe periscopes at varying ranges—training 
+                that would prove invaluable.
+            </p>
+            
+            <h3>Hunting in the Makassar Strait (April 16-20)</h3>
+            <p>
+                Cod spent nearly a week patrolling the Makassar Strait, encountering heavy sailboat traffic but 
+                frustratingly little enemy shipping. On <strong>April 19</strong>, they tracked what appeared to be 
+                a target with echo-ranging and smoke, but the ship remained tantalizingly out of sight. During the 
+                pursuit, Cod ran into an <strong>extensive area of submerged wreckage</strong> including parts of a 
+                ship, huge logs, and debris—bending the pit-log swordarm and giving the torpedo shutters a severe banging.
+            </p>
+            
+            <h3>The High-Speed Target (April 25)</h3>
+            <p>
+                On <strong>April 25</strong>, Cod made radar contact on a target making <strong>15-16 knots</strong>—a 
+                medium-sized, high-speed vessel detected at an unusual 18,000 yards. Despite a night-long chase 
+                approaching Basilan Strait, the target made a landfall on Teinga Island and altered course to the 
+                southwest, escaping into waters too shallow for pursuit.
+            </p>
+            
+            <h3>The "Forest of Masts": Attack on 33-Ship Convoy (May 10)</h3>
+            <p>
+                The patrol's defining moment came on <strong>May 10</strong> off Luzon. At 0159, in bright moonlight, 
+                lookouts sighted smoke on the horizon. As Cod closed, radar revealed contact after contact—a massive 
+                convoy. Commander Dempsey wrote: <em>"The area to the northeast looked like a forest."</em> He counted 
+                masts and smoke from <strong>33 ships</strong>, not including more visible only as distant smoke.
+            </p>
+            <p>
+                The convoy was organized into four formations, each with 2-3 columns. Kamikaze-class destroyers patrolled 
+                ahead and on the flanks; Chidori torpedo boats and minesweepers wove through the interior. Two Mavis 
+                flying boats provided air cover.
+            </p>
+            <div class="highlight success">
+                At 0555, Cod struck. First, three stern tube torpedoes at a <strong>Kamikaze-class destroyer</strong> 
+                at just 650 yards. The first hit right under the bridge—<em>"Both stacks collapsed, and dozens of the 
+                crew (in white uniforms) who had been lining the rails acting as periscope lookouts were tossed into 
+                the air."</em> The ship sagged in the middle as a second torpedo disintegrated her fantail.
+            </div>
+            <p>
+                Swinging immediately to the bow tubes, Dempsey fired six more torpedoes at the cargo ships in 
+                <strong>84 seconds</strong>—two at a Kasado Maru-type transport, four at a large Asosan Maru-type freighter. 
+                The overlapping targets meant even misses might find a hull. Sound tracked the torpedoes running true: 
+                one hit on the Kasado Maru, three hits on the Asosan Maru, and one more on a Brisbane Maru-type in the 
+                far column after a run of 3,800 yards.
+            </p>
+            <p>
+                <strong>Nine torpedoes fired in under two minutes. Seven hits.</strong> Breaking-up noises filled 
+                the sound gear. For the next two hours, the crew heard the distinctive "firecracker explosions" of 
+                ammunition cargo detonating.
+            </p>
+            <div class="highlight danger">
+                The escorts responded with fury. Four ships arrived and dropped <strong>70 depth charges in 15 minutes</strong>, 
+                saturation-bombing the firing point. Aircraft added bombs of their own. The counter-attack continued 
+                for two hours. Cod ran deep and silent, maneuvering to keep the escorts astern. She finally surfaced 
+                <strong>12 hours after firing</strong>, in a thunderstorm, 20 miles from the attack position—only to 
+                encounter a Chidori torpedo boat still searching the area.
+            </div>
+            <p>
+                The patrol report credited Cod with sinking one destroyer (1,315 tons) and probably sinking three 
+                cargo ships totaling over 20,000 tons.
+            </p>
+            
+            <h3>The Eerie Transit of Sibutu Passage</h3>
+            <p>
+                On the return voyage, Cod experienced an unsettling night transit of <strong>Sibutu Passage</strong>. 
+                Between 0100 and 0400 on May 23—with the moon nearly full—and reports that the passage was 
+                "heavily patrolled," the crew picked up approximately <strong>30 radar contacts</strong> on small 
+                objects at ranges from 2,000 down to 800 yards. Some passed as close as 400-500 yards. Yet even 
+                in the bright moonlight, <strong>none could be sighted</strong>. The radar pips resembled those 
+                from oil drums or fishstakes, but their true nature remained a mystery as Cod crept southward 
+                3-4 miles off Sibutu Island's east coast.
+            </p>
+            
+            <h3>Return to Fremantle</h3>
+            <p>
+                The patrol concluded with transits through Makassar Strait and Lombok Strait. Cod returned to 
+                <strong>Fremantle on June 1, 1944</strong>. The May 10 attack made this one of Cod's most successful 
+                patrols—one destroyer confirmed sunk and three large cargo ships probably sunk, totaling over 
+                21,000 tons.
+            </p>
+        </section>
+        
+        <!-- PATROL 4 -->
+        <section id="patrol4">
+            <h2>Fourth War Patrol</h2>
+            <div class="patrol-dates">July 3 – August 25, 1944 | Sulu Sea, Celebes Sea & Makassar Strait</div>
+            
+            <p>
+                Cod's fourth patrol, now under Commander J.A. Adkins, was plagued by <strong>torpedo failures</strong> 
+                that proved maddeningly persistent. With each failed attack, the report noted, "the Commanding Officer 
+                had become more and more anxious to destroy these... targets." Despite multiple well-executed attacks, 
+                the torpedoes consistently ran deep or failed to detonate.
+            </p>
+            
+            <h3>Wolf Pack Operations with Cabrilla</h3>
+            <p>
+                This patrol marked Cod's first <strong>coordinated operations</strong> with other submarines. 
+                She operated in conjunction with USS Cabrilla and later USS Bluefish, exchanging information and 
+                coordinating search patterns via SJ radar and hand-keying signals.
+            </p>
+            
+            <h3>Attack 1: The Torpedoes That Ran Deep (July 16)</h3>
+            <p>
+                On <strong>July 16</strong>, Cod attacked three MFM-type steamers of about 2,000 tons each 
+                in the Sulu Sea near Busuanga. Despite a textbook approach:
+            </p>
+            <ul>
+                <li>Fired 3 torpedoes at Ship A and 3 at Ship B with depths set at 6 feet</li>
+                <li>Fired 4 stern tubes at Ship A as it turned</li>
+                <li><strong>No hits</strong></li>
+                <li>Received <strong>14 depth charges</strong> in return, causing minor damage</li>
+            </ul>
+            
+            <h3>Attack 2: The TDC Says It Should Have Worked (July 17)</h3>
+            <div class="highlight danger">
+                That night, Cod regained contact and executed what the CO described as "a very careful attack":
+                night surface radar approach, tracked targets for 2 hours, set torpedo depths at <strong>3 feet</strong>, 
+                fired 3 torpedoes at 1,500 yards. <strong>The CO watched two torpedo wakes pass directly under 
+                the target.</strong> All three missed. Two were later noted as running deep.
+            </div>
+            <p>
+                After surfacing, the crew performed something remarkable: they <strong>replayed the attack on the 
+                TDC</strong>. The Mark IV Torpedo Data Computer could rerun a firing problem using the recorded 
+                inputs, allowing post-attack analysis. The replay revealed two issues: "firing was commenced too 
+                soon" and "ship's head was swinging during firing"—the boat was still turning when the torpedoes 
+                left the tubes. But critically, the TDC rerun showed that <strong>at least one torpedo should 
+                have hit</strong>. The geometry was correct; the torpedoes simply ran too deep.
+            </p>
+            <p>
+                This kind of rigorous analysis—using the TDC's replay capability to distinguish between crew 
+                error and torpedo failure—was standard practice. In this case, it confirmed what the CO suspected: 
+                the MK 23 torpedoes were running deeper than set. The escort chased and fired at Cod, with shells 
+                splashing close aboard before they escaped.
+            </p>
+            
+            <h3>Attack in the Storm (July 19-20)</h3>
+            <p>
+                On <strong>July 19</strong>, heavy swells and whitecaps from the southwest made depth control 
+                difficult. At periscope depth near Cabra Island, Cod had to <strong>"use negative" twice</strong>—rapidly 
+                flooding the negative buoyancy tank to pull the boat down when waves pushed her toward the surface. 
+                These were challenging conditions for a submerged approach.
+            </p>
+            <p>
+                The weather worsened. On <strong>July 20</strong>, Cod contacted another convoy at 21,000 yards 
+                and tracked it by radar alone—visibility was less than 1,000 yards due to heavy rain and dark, 
+                overhanging clouds. The target, a 4,000-5,000 ton AK, was visible only in <strong>brief lightning 
+                flashes</strong>. At 0444, Cod fired four stern tubes at 1,350 yards. The TDC solution was good; 
+                post-attack analysis confirmed the firing data was correct.
+            </p>
+            <div class="highlight info">
+                No hits were observed. The patrol report's conclusion was blunt: <em>"It is felt that hits should 
+                and would have been obtained if sea conditions were not too bad for proper performance."</em> 
+                Heavy seas could affect torpedo depth-keeping, and the violent motion of the submarine during 
+                firing could throw off even a perfect TDC solution. Upon surfacing: "Very heavy seas."
+            </div>
+            
+            <h3>Refit at Darwin (July 29-30)</h3>
+            <p>
+                After the frustrating series of attacks with no confirmed hits, Cod put into <strong>Darwin on 
+                July 29</strong> for torpedo reloads and repairs. She departed the following day, heading for 
+                the Celebes Sea—where her luck would finally change.
+            </p>
+            
+            <h3>Success in the Celebes Sea (August 3)</h3>
+            <div class="highlight success">
+                Operating with Bluefish near Lifumatola Island, Cod finally scored. Tracking a medium AK 
+                with escort in bright moonlight, the target spotted Cod on her unprotected port quarter 
+                at 3,500 yards—and <strong>attempted to ram</strong>. It was, as the CO noted, "a poor tactic." 
+                Cod fired 4 stern tubes at close range—<strong>3 hits</strong> completely enveloped the target 
+                in black smoke. Breaking-up noises confirmed the kill. The escort dropped only 4 depth charges 
+                before leaving the area.
+            </div>
+            
+            <h3>More Sinkings in the Gulf of Boni (August 10-14)</h3>
+            <p>
+                Cod continued her successful streak in the Celebes area:
+            </p>
+            <ul>
+                <li><strong>August 10:</strong> Sank a small AK with 3 torpedo hits. While examining the wreckage—oil slick, debris, empty depth charge casings—a head was noted "popping up from a large floating box." The survivor was glad to be rescued and was made prisoner.</li>
+                <li><strong>August 10-11:</strong> Attacked an unidentified 4,000-ton vessel, hitting with 4 torpedoes in two attacks. Target sank by stern.</li>
+                <li><strong>August 13-14:</strong> Chased and sank a high-speed landing barge after a surface gun battle and torpedo attack—3 torpedo hits caused spectacular ammunition explosions.</li>
+            </ul>
+            
+            <h3>Return to Fremantle</h3>
+            <p>
+                On August 19, Cod entered Ombai Passage for the homeward transit, paralleling the coast of Alor 
+                at 6-7 miles. That night, the crew observed <strong>brush fires on Timor</strong>—and on the 
+                southern tip of Pantar Island, a <strong>"large fire or volcano"</strong> glowing in the darkness. 
+                The report noted an "active volcano presumed be DLAKI DLANA on PANTAR ISLAND... observed from 35 
+                miles distant." In reality, there is no volcano at Pantar's southern tip; the crew was likely 
+                seeing the incandescence of <strong>Pura</strong>, a small but active volcanic island just south 
+                of Pantar, its glow visible across the dark tropical waters.
+            </p>
+            <p>
+                Cod returned to <strong>Fremantle on August 25, 1944</strong>. Despite the early torpedo 
+                frustrations, the patrol ended successfully with multiple confirmed sinkings in the 
+                Celebes Sea region.
+            </p>
+        </section>
+        
+        <!-- PATROL 5 -->
+        <section id="patrol5">
+            <h2>Fifth War Patrol</h2>
+            <div class="patrol-dates">September 18 – November 20, 1944 | West of Luzon & Palawan Passage</div>
+            
+            <p>
+                Departing <strong>Fremantle on September 18, 1944</strong>, Cod's fifth patrol was her most 
+                productive, featuring multiple attacks, coordinated wolf pack operations with USS Ray, and the 
+                sinking of significant enemy tonnage. This patrol would also mark her transfer from the 
+                Australia-based submarine force to the Pacific Fleet.
+            </p>
+            
+            <h3>Stopover at Darwin (September 25-27)</h3>
+            <p>
+                En route to her patrol area, Cod entered Darwin harbor on <strong>September 25</strong> and 
+                moored alongside USS Coucal, a submarine tender. The crew commenced <strong>loading torpedoes, 
+                fueling, and making voyage repairs</strong>. Cod's CO met with the commanding officer of 
+                USS Angler to exchange tactical intelligence, and obtained information on allied merchant 
+                shipping from a <strong>Royal Australian Intelligence officer</strong> at Darwin. Most 
+                significantly, Cod received new orders by despatch: she was to conduct <strong>coordinated 
+                search and attack operations with USS Ray</strong> in areas west of southern Luzon and Palawan—
+                the beginning of her wolf pack assignment.
+            </p>
+            <p>
+                The departure on <strong>September 26</strong> did not go smoothly. Shortly after getting 
+                underway, the <strong>bow planes failed to rig in</strong> during testing, followed by a 
+                <strong>fire in the rigging panel</strong>. The crew cleared electrical circuits but could 
+                not reduce the heavy overload. At 1244, Cod reversed course for Darwin. Coucal, having 
+                decoded Cod's message, got underway immediately to escort her back into harbor. Repairs 
+                were completed, and Cod finally departed on <strong>September 27</strong>.
+            </p>
+            
+            <h3>Coordinated Pack Operations with Ray</h3>
+            <p>
+                Operating under these new orders, Cod worked as part of a two-boat wolf pack with USS Ray, 
+                coordinating via SJ radar communications and voice radio. The boats exchanged tactical 
+                information and divided patrol areas to maximize coverage of the approaches to Manila.
+            </p>
+            <div class="highlight info">
+                <strong>The Wolf Pack Communications Problem:</strong> Commander Adkins used his patrol report 
+                to lodge a pointed critique. Submarines were using the SJ radar for inter-boat communication 
+                by "hand-keying"—but while transmitting, <em>"it can not be used for tracking."</em> He warned: 
+                <em>"Sooner or later a boat will be sunk by an enemy that he would have destroyed or avoided 
+                had he been searching at the time with his SJ."</em> His solution: reinstall the TBS 
+                (Talk Between Ships) voice radio. <em>"Why was it removed?"</em> he asked pointedly. 
+                It was the kind of real-world feedback that shaped submarine doctrine through the war.
+            </div>
+            
+            <h3>Lifeguard Search for B-24 Crew (October 1)</h3>
+            <p>
+                On <strong>October 1</strong>, Cod joined USS Angler in searching for 9 crew members from a downed 
+                B-24 bomber in the Makassar Strait. They questioned native schooners and conducted a parallelogram 
+                search pattern. Despite extensive efforts, the aviators were never found.
+            </p>
+            
+            <h3>The Tanker That Wouldn't Die (October 5-6)</h3>
+            <p>
+                The signature attack began when Cod sighted a 5-ship convoy off Mindoro protected by a 
+                Wakatake-class destroyer. In terrible visibility with rain squalls:
+            </p>
+            <ul>
+                <li><strong>Attack 1 (1318):</strong> Fired 4 bow tubes at a large tanker and 2 at an AK. 
+                    Two hits on the tanker with "great balls of fire billowing up"</li>
+                <li>The Wakatake dropped 32 depth charges—one harrowing hour of evasion. At one point, the 
+                    familiar deep booms changed to "smaller, more frequent explosions with a sharp crack." 
+                    The control party said in unison: <strong>"Mousetraps"</strong>—recognizing the distinctive 
+                    sound of forward-throwing anti-submarine rockets</li>
+                <li><strong>Attack 2 (1517):</strong> The tanker was still afloat but crippled. Fired 4 more 
+                    torpedoes—<strong>4 hits</strong>. The tanker "disappeared almost immediately leaving a 
+                    low, thin patch of steam along his length."</li>
+            </ul>
+            <div class="highlight success">
+                <strong>Total confirmed:</strong> 1 large tanker (EU) 10,000 tons SUNK
+            </div>
+            
+            <h3>Running with Ray Against Convoys (October 6-7)</h3>
+            <p>
+                After the tanker attack, Cod formed a scouting line with USS Ray. They tracked a large 15,000-ton 
+                oiler with escorts. Cod's stern tube attack scored <strong>2 hits</strong>, and Ray finished the 
+                damaged oiler the following morning.
+            </p>
+            <div class="highlight danger">
+                What followed was, in the CO's words, <em>"the most harrowing hour of my experience."</em> Two escorts 
+                hunted Cod relentlessly—pinging, listening, making run after run directly overhead. The CO wrote: 
+                <em>"It is impossible to describe the tension attached to listening for the charges when you know 
+                that the scoundrel is in a good dropping position and he does not drop."</em> They dropped only 
+                8 charges total, but the silent stalking was far worse than depth charging.
+            </div>
+            
+            <h3>Attacking a Warship (October 8)</h3>
+            <p>
+                Cod encountered a 1,500-ton warship with unusual "ski-slide" stern configuration. After maneuvering 
+                for position, Cod fired 6 bow tubes—but the target spotted the torpedo wakes and turned to avoid. 
+                The escort dropped 5 depth charges and departed.
+            </p>
+            
+            <h3>Green Water Down the Hatch (October 9)</h3>
+            <p>
+                The following morning brought the patrol's only heavy weather. During a radar approach on 
+                two small escort vessels, Cod attempted to force through heavy seas on the surface. The result: 
+                <strong>"a large amount of water down the conning tower hatch."</strong> No material damage, 
+                but a reminder that the sea itself could be as dangerous as the enemy.
+            </p>
+            
+            <h3>Lifeguard Duty for Carrier Strikes (October 16-18)</h3>
+            <p>
+                Cod was assigned lifeguard duty west of Subic Bay during carrier strikes on Luzon. These raids 
+                were part of the opening phase of the <strong>U.S. reconquest of the Philippines</strong>, conducted 
+                by <strong>U.S. Navy Task Force 38</strong> under <strong>Admiral William F. Halsey</strong>—just 
+                two days before the amphibious landings at Leyte on <strong>October 20, 1944</strong>.
+            </p>
+            <p>
+                On <strong>October 18</strong>, with her BK beacon lit, searchlight rigged, flares mounted, 
+                and colors flying, Cod watched flights of 30 aircraft—SB2Cs and F6Fs—approach from the south, 
+                heading northeast for Subic. Two fighters peeled off to investigate Cod; she turned to show 
+                her silhouette, and they passed six miles away.
+            </p>
+            <p>
+                Commander Adkins was so moved by the sight that he quoted <strong>Tennyson's "Locksley Hall"</strong> 
+                in his patrol report—an 1835 poem that prophetically imagined aerial warfare:
+            </p>
+            <blockquote style="font-style:italic; border-left:3px solid var(--brass); padding-left:15px; margin:15px 0; color:#ccc;">
+                "Heard the heavens fill with shouting, and there rain'd a ghostly dew<br>
+                From the nations' airy navies grappling in the central blue..."
+            </blockquote>
+            <p>
+                He added wryly: <em>"It all seemed to fit, except the final line. If we want to reserve 
+                MANILA and SUBIC BAYS for our own use in the next war, we had better keep plenty of airy 
+                navy stationed there."</em>
+            </p>
+            
+            <h3>The Gun Attack "Fiasco" (October 22)</h3>
+            <p>
+                Off Cape Bolinao, Cod sighted five <strong>"sea trucks"</strong>—motor-driven boats with 
+                foresails—heading south. The OOD talked the CO into a battle surface to engage with the 
+                4-inch deck gun. What followed was, in Commander Adkins' words, a <em>"fiasco."</em>
+            </p>
+            <p>
+                The third shot scored a hit—but had no effect. Then the <strong>foot-firing mechanism jammed</strong>. 
+                While the crew cleared the jam, all five sea trucks turned toward Cod and opened fire with 
+                .30 to .50 caliber guns. Their shots fell 1,000 yards short, but <em>"the ricochets were 
+                singing all around us."</em>
+            </p>
+            <p>
+                Cod turned away, cleared the jam, and resumed firing—<strong>75 rounds total</strong>. The 
+                deflection control was "beautiful," but the pointing was "exasperating": shots fell 100 yards 
+                over, then 50 short, then 50 over, with "monotonous regularity." One more hit was scored, 
+                again with no effect. Approaching the 100-fathom curve near shore, Cod broke off.
+            </p>
+            <p>
+                When another sea truck was spotted, the CO called the gun crew back to stations <em>"to let 
+                them save their face"</em>—but an aircraft contact forced them to clear the deck and submerge, 
+                losing the breech cover in the process. Adkins reflected that more would have been sunk had 
+                he <em>"dashed in to close range with 20 mms, machine guns, and 4-inch all blazing."</em>
+            </p>
+            
+            <h3>Transfer to Pearl Harbor</h3>
+            <p>
+                On <strong>October 29</strong>, Cod received six prisoners from USS Bream—Japanese soldiers 
+                whose transport had been sunk from under them. Their condition was grim: the men were 
+                <em>"covered with open ulcerated sores similar to the sores of syphilis, and chancres."</em> 
+                The pharmacist's mate treated them with sulfa powder and ointment dressings.
+            </p>
+            <p>
+                The prisoners were kept strictly isolated from the crew. The <strong>magazine was converted 
+                to a brig</strong>, and after the prisoners departed at Saipan, the space was scrubbed with 
+                soap and water, then <strong>wiped down with torpedo alcohol</strong>—the Navy's all-purpose 
+                disinfectant.
+            </p>
+            <p>
+                Cod stopped briefly at <strong>Saipan on November 6</strong>—where she experienced two night 
+                air raids by Japanese aircraft—before continuing east. She arrived at <strong>Pearl Harbor 
+                on November 20, 1944</strong>, completing her transfer from the Southwest Pacific submarine 
+                force to the Pacific Fleet.
+            </p>
+        </section>
+        
+        <!-- PATROL 6 -->
+        <section id="patrol6">
+            <h2>Sixth War Patrol</h2>
+            <div class="patrol-dates">March 24 – May 29, 1945 | East China Sea & Formosa Strait (Pearl Harbor via Guam)</div>
+            
+            <p>
+                Cod departed <strong>Pearl Harbor on March 24, 1945</strong> and arrived at <strong>Guam 
+                on April 9</strong>. There she received orders under <strong>ComSubPac Operation Order 
+                No. 75-45</strong> to conduct coordinated patrol and lifeguard operations for the 5th Air 
+                Force with <strong>USS Pompon</strong> in the East China Sea. Getting underway that same day, 
+                Commander J.A. Adkins led Cod on this harrowing 51-day mission into the heavily mined and 
+                defended waters of the East China Sea and Formosa Strait. The patrol featured close-quarters 
+                gun battles, torpedo attacks, and narrow escapes.
+            </p>
+            
+            <h3>A Harrowing Day (April 14)</h3>
+            <p>
+                <strong>April 14</strong> proved to be one of the patrol's most harrowing days. That morning, 
+                a lookout sighted a large 4-engine float plane dead ahead at an estimated range of 5 miles. 
+                Cod submerged immediately. Seven minutes later, <strong>one bomb</strong> detonated close 
+                enough to jar loose an electrical connection in the after torpedo room.
+            </p>
+            <p>
+                Later that day, a lookout spotted a floating mine—round, with four horns visible, floating 
+                two-thirds submerged and appearing fairly new. Cod took photographs, then attempted to 
+                destroy it. <strong>.30 caliber carbine shots bounced off the mine's case</strong>; it took 
+                .50 caliber fire to detonate it at 125 yards. Several pieces of spent shrapnel hit the boat.
+            </p>
+            <p>
+                Less than an hour later, Cod <strong>struck a submerged object</strong>—the impact heard 
+                throughout the boat, loudest in the forward torpedo room. The pit log was knocked out of 
+                commission and the rod meter bent so badly the crew couldn't retrieve it with a chain fall. 
+                They jettisoned it and installed a spare. In these heavily mined waters, the submerged 
+                object may well have been a <strong>dud mine</strong> whose contact horns failed to 
+                detonate—an extraordinarily lucky escape.
+            </p>
+            
+            <h3>Memorial Service for President Roosevelt</h3>
+            <div class="highlight info">
+                On <strong>April 15, 1945</strong>, while submerged at periscope depth near Akuseki Jima, 
+                Cod held a memorial service in the after battery for the late Franklin Delano Roosevelt. 
+                The President had died three days earlier, and the crew paused operations to honor him 
+                even while in enemy waters.
+            </div>
+            
+            <h3>Hunting Mines by Moonlight (April 16)</h3>
+            <p>
+                On the night of <strong>April 16</strong>, a lookout and the OOD spotted a mine close 
+                aboard to starboard, plainly visible in the <strong>moonstreak</strong>. Commander Adkins 
+                stopped and began maneuvering to destroy it—a maneuver he noted was <em>"not as foolhardy 
+                as it sounds."</em> By steering 170° to the left of the moon's azimuth, he knew the mine 
+                was on his port hand and could always pull clear to the right.
+            </p>
+            <p>
+                His plan: silhouette the mine in the moonlight and sink it with gunfire. The SJ radar 
+                picked up the mine at 1,000 yards. But just as he maneuvered it into the moonstreak, 
+                <strong>the moon became obscured by low clouds on the horizon</strong>. Cod resumed 
+                course and speed, maneuvering to avoid floating objects in the darkness.
+            </p>
+            
+            <h3>Gun Attack: Two Ships Sunk (April 17)</h3>
+            <p>
+                On <strong>April 17</strong>, Cod used her 5-inch gun to attack a floating mine—the first 
+                two rounds were short, and the third was a dud that ricocheted off the water. They finished 
+                it with a direct 40mm hit.
+            </p>
+            <p>
+                Later that morning, lookouts spotted two ships in the haze. Tracking revealed one was 
+                <strong>towing the other</strong>. Cod maneuvered to keep the armed tug masked by the tow, 
+                then surfaced 3,750 yards astern and opened fire. At 3,200 yards, 5-inch rounds struck the 
+                tow—an oiler carrying oil cargo. <em>"Great clouds of black smoke poured out and flames 
+                roared forth as if from jets."</em> Cod shifted fire to the tug, hitting it as well.
+            </p>
+            <p>
+                Aircraft forced Cod to break off and submerge, but both vessels were destroyed: the tug 
+                <strong>CHOYO MARU</strong> (~2,000 tons) and the oiler <strong>BAISHI MARU</strong> 
+                (~2,000 tons). Cod recovered survivors, gaining valuable intelligence about Japanese 
+                shipping routes between Keelung and Shimonoseki.
+            </p>
+            
+            <h3>The Sampan (April 19)</h3>
+            <p>
+                On <strong>April 19</strong>, a lookout sighted a ship and Cod set battle stations, 
+                closing to investigate. It turned out to be a fishing sampan. After firing a 40mm round 
+                across her bow, Cod maneuvered alongside. It was a typical Chinese fishing boat—<em>"eyes 
+                painted in the bow, oldest man at the tiller, youngest and smallest at the sculling oar, 
+                one small boy hiding under the deck boards, lots of yammering."</em>
+            </p>
+            <p>
+                The Chief of the Boat boarded and found the sum of their cargo: one sack of beans, a 
+                half-bushel of potatoes, and one fish. Cod gave the occupants <strong>five packages of 
+                cigarettes</strong>, with which they were highly pleased. Pictures were taken.
+            </p>
+            
+            <h3>The April 24-25 Torpedo Attacks</h3>
+            <p>
+                The patrol's major action came on the night of <strong>April 24-25</strong> in the Formosa Strait.
+            </p>
+            
+            <h4>Attack #1: Under Fire (Night of April 24)</h4>
+            <p>
+                At 2130, the TDM picked up pinging. Cod closed to investigate and radar found two ships at 
+                9,450 yards—both pinging at 15.6 kcs. Cod attacked on the surface, firing 4 torpedoes. All 
+                ran erratically and missed.
+            </p>
+            <p>
+                The target opened fire with its main battery. Shells splashed close—the nearest falling 
+                <strong>40 yards from the bow</strong> and <strong>20 yards to starboard of the after engine 
+                room hatch</strong>, splashing water on the bridge. Commander Adkins estimated the guns were 
+                4.7-inch caliber from the <em>"deafening detonation."</em> The target then switched to machine 
+                guns and tracers. <strong>The next day, the crew dug a lead slug out of the superstructure</strong>—they 
+                had been hit.
+            </p>
+            <p>
+                Cod submerged and was <strong>depth charged</strong>, which knocked out the ST radar tuning.
+            </p>
+            
+            <h4>Attack #2: The Kill (April 25)</h4>
+            <p>
+                At 0031, Cod came to periscope depth. The anti-submarine vessel lay 4,000 yards away, apparently 
+                stopped. The crew made ready 3 torpedoes forward and 3 aft. As Ensign Wallace and RT1c Thomas 
+                worked to repair the ST, the target began sweeping toward them, zigging 60° from side to side.
+            </p>
+            <p>
+                With the range down to 3,500 yards and the ST back in commission, Cod fired. <strong>One torpedo 
+                hit Minesweeper No. 41</strong>, which sank. Passing through the oil slick, the crew counted 
+                <em>"78 heads... on one side only. There were more than this swimming. Most of them were shouting 
+                and moaning in a melancholy manner."</em>
+            </p>
+            <p>
+                Cod picked up one survivor—ALYEEMA, a 1st class petty officer from the engineering branch. He was 
+                badly injured internally and confirmed the ship's identity.
+            </p>
+            
+            <h4>Attack #3: Frustration (April 25)</h4>
+            <p>
+                Cod pursued the remaining two escorts, attacking on the surface with 6 torpedoes—3 at each target. 
+                All ran erratically. No hits.
+            </p>
+            
+            <h3>Torpedo Troubles</h3>
+            <p>
+                Of 16 torpedoes fired during this patrol, <strong>12 ran erratically</strong>. Post-attack analysis 
+                and prisoner interrogation confirmed that many torpedoes were visibly broaching, porpoising, or 
+                running in circles—a frustrating continuation of the torpedo problems that plagued earlier patrols.
+            </p>
+            
+            <h3>Tragedy: Torpedo Fire and Man Overboard (April 26)</h3>
+            <div class="highlight danger">
+                At <strong>2135 on April 26</strong>, disaster struck. While taking readings on partially-withdrawn 
+                Mark 18 torpedoes, the battery in torpedo No. 99264 (tube #8) exploded and caught fire. The after 
+                torpedo room filled with dense, suffocating smoke. The smoke lungs were inadequate—only 3 men 
+                with rescue breathing apparatus could enter to fight the blaze.
+            </div>
+            <p>
+                With the warhead at risk of detonation, the Executive Officer requested permission to open the 
+                after torpedo room hatch. <strong>FOLEY, L.E., QM2c</strong>, volunteered to go on deck to help 
+                open the hatch. <strong>JOHNSON, A.G., S1c</strong>, coming up to stand lookout, was sent aft 
+                to assist. <strong>A wave washed both men overboard. Johnson had no life jacket.</strong>
+            </p>
+            <p>
+                Meanwhile, Lt. K.F. Beckman and torpedomen Krusenklaus and Grenner performed heroic acts—working 
+                in intense heat and smoke, rigging jiggers to the red-hot torpedo, and holding their thumbs over 
+                the hydrogen burner hole during firing—to eject the burning torpedo from the tube before the 
+                warhead could explode.
+            </p>
+            <p>
+                Cod searched through the night. A PBM seaplane from Okinawa arrived to help, dropping flares 
+                and a life raft. The next morning, fighters and another PBM joined the search despite terrible 
+                weather. The fighters offered to stay beyond their fuel limit; the CO later wrote: <em>"We felt 
+                that we were being backed up by a pretty fine organization when these fliers came out in this 
+                stinking weather to help us."</em>
+            </p>
+            <p>
+                At <strong>0520 on April 27</strong>, FOLEY was recovered—utterly exhausted but alive. He 
+                reported that he had supported JOHNSON in the water for hours, but about two hours before 
+                rescue, Johnson "said good-bye" and slipped under. <strong>Andrew G. Johnson, S1c, was never 
+                found.</strong> On <strong>April 29</strong>, Cod conducted burial services for him.
+            </p>
+            <div class="highlight info">
+                In his patrol report remarks, Commander Adkins wrote: <em>"ANDREW GORDON JOHNSON... was my 
+                lookout, shipmate and friend. He died heroically in the line of duty, in order to save his 
+                ship. The commanding officer derives no satisfaction from recording the events of the patrol... 
+                The only satisfaction lies in recording the acts of heroism that were performed by JOHNSON, 
+                and by his shipmates."</em>
+            </div>
+            
+            <h3>Death of a Prisoner (April 28)</h3>
+            <p>
+                On <strong>April 28</strong>, the Japanese prisoner ALYEEMA died of <strong>acute peritonitis</strong>—likely 
+                caused by internal injuries from a depth charge that had not been set to safe before his ship sank. 
+                Cod held a <strong>funeral service</strong> for him, and he was buried at sea.
+            </p>
+            
+            <h3>Hospital Ship and Night Coordination (May 2)</h3>
+            <p>
+                On the morning of <strong>May 2</strong>, a periscope sighting initially thought to be a sampan 
+                rapidly developed into a <strong>properly marked hospital ship</strong> on a northerly course 
+                at 14 knots—similar in appearance to TATUHARU MARU. Cod pulled off the ship's track into the sun 
+                and watched her go by.
+            </p>
+            <p>
+                That night, Cod tracked two radar contacts in darkness, rain, and overcast. After closing to 
+                1,500 yards, they made out the sails of two junks—the same ones spotted earlier. No threat.
+            </p>
+            <p>
+                Later that night, Cod raised a <strong>PBM flying boat from Okinawa</strong> on VHF. The plane 
+                had also detected Cod's wolfpack partner Pompon on radar. When Cod reported the suspicious junks 
+                to the south, the PBM flew off and <strong>illuminated them with flares</strong>, returning to 
+                report they appeared friendly. The pilot offered to <strong>remain in the area most of the night</strong> 
+                and to call on him if needed—a striking example of air-submarine coordination, made possible by 
+                the capture of Okinawa just weeks earlier.
+            </p>
+            
+            <h3>Trading with the Fishing Fleet (May 6)</h3>
+            <p>
+                On <strong>May 6</strong>, Cod had to run through a Chinese fishing fleet to retire their 
+                scouting line. The crew decided to investigate—and see if they could pick up some fish.
+            </p>
+            <p>
+                Firing 40mm warning shots across bows, they stopped several junks and sampans. Finding nothing 
+                suspicious, they began trading: <strong>bread, canned goods, and cigarettes for fresh fish</strong>. 
+                One batch turned out to be salt water eels—<em>"Very good."</em> Another batch had been drying 
+                in the sun too long: <em>"we had to throw them over the side."</em>
+            </p>
+            <p>
+                That evening, Cod formed a scouting line with Pompon and resumed patrol.
+            </p>
+            
+            <h3>The Pink Periscope (May 8)</h3>
+            <p>
+                On <strong>May 8</strong>, while on periscope patrol off Haitan Island, Cod observed numerous 
+                fishing sampans. Two of them spotted the periscope as they passed close aboard. One fisherman, 
+                apparently thinking it was flotsam worth retrieving, decided to grab it—making <strong>two 
+                passes at the scope</strong>, once with a boat hook and once with a man leaning out of the bow.
+            </p>
+            <p>
+                Commander Adkins noted dryly: <em>"Our pink periscope camouflage is apparently better than I 
+                had thought."</em> (U.S. submarines used pink paint on periscopes—related to "Mountbatten Pink"—believing 
+                it helped them blend with the water and sky at dawn and dusk.)
+            </p>
+            
+            <h3>Returning the Net (May 9)</h3>
+            <p>
+                On <strong>May 9</strong>, Cod surfaced to find a <strong>fishing net and line draped over the 
+                boat</strong>—likely snagged while submerging through the fishing fleet. The crew bundled it up, 
+                found the nearest sampan, and returned it.
+            </p>
+            <p>
+                The fisherman was overjoyed. Adkins noted: <em>"This was also the best gift we had made to any 
+                Chinaman yet."</em> When Cod shoved off, the grateful fishermen <strong>chased them for several 
+                minutes, attempting to give them fish</strong> in return.
+            </p>
+            
+            <h3>Chasing the Will-o'-the-Wisp (May 16)</h3>
+            <p>
+                On <strong>May 16</strong>, the SJ radar picked up interference that the radar officer was 
+                certain indicated a Japanese 10-centimeter radar. With fuel to spare, Adkins decided to chase 
+                this <em>"will-o'-the-wisp."</em> After hours of maneuvering—including steaming in a square 
+                in the middle of Formosa Strait—he concluded that the interference did not necessarily indicate 
+                an enemy radar at all.
+            </p>
+            <div class="highlight info">
+                <strong>A Ham Radio Operator?</strong> Commander Adkins' analysis reveals unusual technical 
+                sophistication: <em>"I believe that we have quite a bit to learn about skip distances, harmonics, 
+                refraction, reflections, side lobes, back lobes, and general atmospheric conditions in connection 
+                with this radar."</em> This is the vocabulary of an amateur radio enthusiast—suggesting Adkins 
+                may have been a licensed "ham" before the war.
+            </div>
+            
+            <h3>Desperate to Board (May 17)</h3>
+            <p>
+                On <strong>May 17</strong>, Cod approached a junk—and <strong>four Chinese immediately jumped 
+                aboard the submarine</strong>. When the crew directed the rest to man their sampan and come 
+                alongside, they thought they were all being invited aboard and paddled over eagerly.
+            </p>
+            <p>
+                The crew had to use <em>"threats with guns and main force"</em> to prevent more from boarding. 
+                Getting all <strong>14 Chinese</strong> back into the sampan with their bags and baggage was 
+                <em>"a feat of no mean suasion on the part of the Chief of the Boat."</em> Those on deck 
+                <em>"went to their knees and protested while those who were in the sampan joined them in moaning 
+                and sighing."</em> The sampan was taking water over the gunwales, though Adkins noted it 
+                <em>"was in no danger of sinking."</em>
+            </p>
+            <p>
+                With a guard keeping the sampan's occupants in place with a carbine, the boarding party 
+                searched the junk: a small amount of fish, 3 bags of rice, some papers, and a suitcase of 
+                civilian clothes—nothing suspicious. Cod decided not to sink her. Before casting loose, they 
+                gave the fishermen <strong>a gunny sack of canned food and a whole carton of cigarettes</strong>—which, 
+                Adkins noted, <em>"should more than make up for the holes in their sails and the damage to 
+                their halyards."</em>
+            </p>
+            
+            <h3>Breaking Out the Colors (May 18)</h3>
+            <p>
+                On <strong>May 18</strong>, Cod set course north along the China coast to search by daylight 
+                an area that had <em>"now become blind bombing by night"</em>—a testament to the intensity 
+                of ongoing 5th Air Force raids on Formosa.
+            </p>
+            <p>
+                When Cod approached junk #11704, the fishermen doused their sails in alarm. <em>"All hands 
+                showed considerable alarm until we broke out the colors, at which the occupants smiled and 
+                waved at us."</em>
+            </p>
+            <p>
+                That morning, orders arrived from ComSubPac: Cod was to rendezvous with <strong>USS Muskallunge</strong> 
+                to transfer the PCO (Prospective Commanding Officer) from Cod to assume command of Muskallunge, 
+                and to receive the <strong>sick CO of Muskallunge</strong> for evacuation to Guam.
+            </p>
+            
+            <h3>Command Transfer at Sea (May 20-21)</h3>
+            <p>
+                On the night of <strong>May 20-21</strong>, in fairly heavy seas, Cod rendezvoused with Muskallunge. 
+                To calm the water, Muskallunge pumped oil while Cod circled, spreading additional oil—including 
+                5 gallons from the <em>"Forward Torpedo Room head."</em>
+            </p>
+            <p>
+                At 0040, <strong>Comdr. W.H. Lawrence</strong> climbed into a rubber boat with Lt. Hurst as coxswain 
+                and set off across the oil slick to assume command of Muskallunge. The oil slick <em>"proved 
+                reasonably effective in keeping the waves from breaking."</em> Lt. Hurst's chief difficulty, however, 
+                was unexpected: <em>"the fish nudging him through the bottom of the boat."</em> He turned off his 
+                light when this happened—but turned it back on when Cod started playing the searchlight.
+            </p>
+            <p>
+                Muskallunge received Lawrence, then sent the rubber boat back with <strong>Lt. Comdr. L.A. Lajaunie Jr.</strong>, 
+                her sick former commanding officer. Cod recovered the boat at 0150. Five minutes later, Muskallunge 
+                departed on patrol and Cod set course for Guam.
+            </p>
+            
+            <h3>Through the Eye of a Typhoon (May 21)</h3>
+            <p>
+                As Cod headed for Guam, the barometer began falling—dropping <strong>0.30 inches in one hour</strong>. 
+                They were in the northeast quadrant of a cyclonic storm. At 1600, the barometer steadied at 29.60 
+                inches, winds decreased, and for a brief period they experienced <em>"an almost calm sea with a 
+                slight up and down movement and the sun shining overhead"</em>—they had passed through the 
+                <strong>eye of the typhoon</strong>. By 1700, wind and sea picked up again from the southwest 
+                as they cleared the storm center.
+            </p>
+            <p>
+                That night, during transit of the Nansei Shoto, Cod contacted an <strong>Okinawa-based search plane</strong>. 
+                After the pilot reported no targets, Cod warned him about the typhoon to the northwest. He replied 
+                that he already knew—<em>"he had been flying around in it for the past 3 hours."</em>
+            </p>
+            <div class="highlight info">
+                Commander Adkins reflected: <em>"I doubt that the American public will ever fully realise the 
+                risk and hardships involved in the non-glamorous aspects of the air war."</em>
+            </div>
+            
+            <h3>Return to Guam</h3>
+            <p>
+                Cod returned to Guam on May 29, 1945, having sunk Minesweeper No. 41, destroyed 11 floating 
+                mines by gunfire, survived intense close-range combat, and suffered the tragic loss of 
+                Seaman Johnson—the only crew member killed during Cod's seven war patrols.
+            </p>
+        </section>
+        
+        <!-- PATROL 7 -->
+        <section id="patrol7">
+            <h2>Seventh War Patrol</h2>
+            <div class="patrol-dates">June 26 – August 13, 1945 | Indo-China Coast & Gulf of Siam (Guam to Fremantle)</div>
+            
+            <p>
+                Departing <strong>Guam on June 26, 1945</strong>, USS Cod's seventh and final war patrol, under 
+                new commanding officer Lt. Comdr. E.M. Westbrook Jr., was a dramatic 49-day mission that culminated 
+                in the war's end. It featured one of the most remarkable rescue operations in submarine history, 
+                combat action, and a harrowing escape that left sailors stranded behind enemy lines.
+            </p>
+            <p>
+                On <strong>July 1</strong>, after transiting the Batan Island Group, Cod reported for duty to 
+                <strong>CTF 71</strong> (Commander Task Force 71) and received her assignment: patrol area off 
+                the <strong>southeast Indo-China coast</strong>.
+            </p>
+            <p>
+                On <strong>July 5</strong>, Cod rendezvoused with <strong>USS Besugo</strong> off Badai Bay. 
+                Besugo shared what intel she had: <em>"she had been here three weeks and that the area was 
+                dead."</em> The CO noted dryly: <em>"Encouraging news!"</em> Cod <em>"bid her farewell and 
+                took up our lonely vigil."</em>
+            </p>
+            <p>
+                On <strong>July 7</strong>, Cod received orders from CTF 71 to proceed to <strong>Subic Bay</strong> 
+                to refuel—a brief interruption before the patrol's most dramatic event.
+            </p>
+            
+            <h3>The Rescue of HNMS O-19 (July 8–10, 1945)</h3>
+            <div class="highlight success">
+                The defining event of Patrol 7 was the rescue of the Dutch submarine <strong>HNMS O-19</strong>, 
+                which had run hard aground on <strong>Ladd Reef</strong> in the South China Sea. This remains 
+                the <strong>only international submarine-to-submarine rescue in history</strong>.
+            </div>
+            <p>
+                On <strong>July 8</strong>, en route to Subic Bay, Cod received orders to divert to Ladd Reef 
+                at four-engine speed. Until contact was made, they didn't know the condition of O-19 or her crew. 
+                Cod prepared for the worst: rubber boats, heaving lines, life rings, and rescue party topside; 
+                <em>"dry clothes, empty bunks, hot soup and coffee below."</em>
+            </p>
+            <p>
+                O-19's captain, <strong>Lt. Comdr. J.F.D. van Hooff, RNN</strong>, hadn't lost his sense of humor. 
+                He requested Cod approach at dawn to take towlines. When Cod replied they would see him at dawn, 
+                van Hooff answered: <em>"We will certainly be here."</em>
+            </p>
+            <p>
+                On <strong>July 9</strong>, the towing attempts began. The current was <em>"really something"</em>—1.5 
+                knots easterly. Maneuvering was <em>"ticklish cruising,"</em> trying to put Cod's bow within ten feet 
+                of O-19's stern without running aground themselves. With the cable secured, both submarines backed 
+                while O-19 <strong>fired her forward gun</strong>, <em>"making lots of smoke"</em>—using the recoil 
+                to add extra backward thrust. But the second cable snapped. Cod took aboard 80 fathoms of chain 
+                from O-19 and tried again.
+            </p>
+            <p>
+                On <strong>July 10</strong>, at 1145, the last line parted. After <strong>eight hours yesterday and 
+                six today</strong> with no progress, Adkins sent word to O-19: stand by to take off personnel. He wrote:
+            </p>
+            <blockquote>
+                <em>"Felt almost as bad as the O-19 skipper at his having to abandon his ship. However, did not see 
+                what more we could do."</em>
+            </blockquote>
+            <p>
+                Cod had touched bottom forward herself <em>"at least once"</em> during the many approaches—Adkins 
+                <em>"did not desire to have two submarines aground."</em> Their towing gear was <em>"makeshift,"</em> 
+                and though the crew was <em>"willing and resourceful,"</em> they were <em>"inexperienced at rigging 
+                for a tow."</em> And always, the specter: <em>"Jap planes and/or subs might have appeared at any 
+                embarrassing moment."</em>
+            </p>
+            <p>
+                All <strong>56 Dutch officers and crew</strong> were evacuated to Cod. Then came the destruction:
+            </p>
+            <ul>
+                <li><strong>Demolition charges</strong> went off with a muffled explosion, smoke pouring from the conning tower</li>
+                <li><strong>Torpedo #5</strong> hit just abaft the conning tower—left a large hole but O-19 didn't budge</li>
+                <li><strong>Torpedo #4</strong> struck the after torpedo room (containing two warheads)—<em>"terrific explosion. 
+                    Stern gone, after part completely wrecked"</em></li>
+                <li><strong>16 rounds from the 5-inch gun</strong> at 1,500 yards—16 hits, a dozen holes in her hull</li>
+            </ul>
+            <p>
+                What remained of O-19 stayed on the reef, listing and smoking heavily, but safe from Japanese capture. 
+                Adkins noted ruefully that he wished his first torpedo had been fired at an enemy rather than an ally. 
+                He <em>"could appreciate the captain's feelings as he silently watched his boat being destroyed."</em>
+            </p>
+            <p>
+                On <strong>July 13</strong>, Cod arrived at <strong>Subic Bay</strong>, escorted by USS <em>Rombach</em> (DE-364). 
+                Mooring alongside USS <em>Anthedon</em>, she transferred the 56 O-19 personnel ashore, received fuel, 
+                and effected minor voyage repairs before continuing her patrol.
+            </p>
+            
+            <h3>The Lucky Convoy (July 19-20)</h3>
+            <p>
+                On <strong>July 19</strong>, Cod received a contact report from USS <em>Hammerhead</em> on a convoy. 
+                Racing to intercept, she took up position in a scouting line with <em>Hawkbill</em>. By mid-morning, 
+                smoke was sighted—and with it, at least <strong>five aircraft</strong> providing air cover: float planes 
+                and land-based fighters circling protectively.
+            </p>
+            <p>
+                The convoy consisted of five ships: one oiler, three cargo vessels, a trawler escort, and a 
+                <strong>Kamikaze-class destroyer</strong> patrolling aggressively up and down the flank, presenting 
+                alternating 90° angles. At 1110, with the range down to 2,800 yards and a good firing solution, 
+                <strong>depth charges began falling before Cod could fire</strong>. The scope dipped under; the approach 
+                officer put in a sound bearing and fired three torpedoes at an AK. All missed—the target had been alerted 
+                and maneuvered to avoid.
+            </p>
+            <p>
+                Cod went deep to 150 feet in just 27 fathoms, rigging for depth charge. Over the next half hour, 
+                <strong>18 depth charges</strong> fell—none too close. The patrol report later noted that a 
+                <strong>six-degree temperature gradient between 80 and 100 feet</strong>—a thermocline that would 
+                bend enemy sonar—<em>"proved very useful in evasion tactics that day."</em> When she came to 
+                periscope depth, the destroyer and trawler were milling around 8,000 yards astern.
+            </p>
+            <p>
+                That night, after unsuccessful attacks on the same convoy by USS <em>Brill</em> and USS <em>Bumper</em>, 
+                Cod made an end-around to get ahead of the target. At 0310 on <strong>July 20</strong>, she was in 
+                position—submerged, ready to fire bow tubes at the destroyer, then shift to stern tubes for the ships 
+                on his beam. Visibility was poor in heavy rain squalls.
+            </p>
+            <p>
+                Then, at 0313: <em>"A wonderful thing has happened! Our radar just went out! Couldn't possibly have 
+                picked a more critical moment."</em> An electrical fire in the SJ radar's main control unit had knocked 
+                it out completely. Without radar, the attack was hopeless.
+            </p>
+            <blockquote>
+                <em>"This was most discouraging, especially after having a second chance at this Jap. That KAMIKAZE 
+                must carry a good luck charm or pray to his gods regularly. Today he has dodged torpedoes fired by 
+                three submarines, requested and received a rain squall, and has cast a spell over our radar. 
+                He hasn't been touched!"</em>
+            </blockquote>
+            
+            <h3>The Junk-Sinking Campaign Begins (July 21)</h3>
+            <p>
+                With conventional targets scarce, Cod turned to disrupting the small-boat traffic carrying contraband 
+                between Singapore and ports to the north. On <strong>July 21</strong>, after rendezvousing with 
+                <em>Hammerhead</em>, Cod sighted her first target—a large junk, 131 tons, carrying rice.
+            </p>
+            <p>
+                A single 40mm round fired ahead brought the junk to a halt. The crew of 12 <em>"crawled over the stern 
+                fast"</em> into their lifeboat. A boarding party inspected the cargo and papers—the ship had recently 
+                been in upkeep at Singapore. With the crew safely rowing toward shore four miles away, Cod opened fire: 
+                <strong>7 rounds of 5-inch and 40 rounds of 40mm</strong> at 500 yards. The junk sank. It was the first 
+                of what would become <strong>23 junks and motor sampans</strong> destroyed over the next twelve days.
+            </p>
+            <p>
+                The Japanese noticed. Within the hour, a float plane (Rufe) appeared and <strong>dropped two bombs</strong> 
+                as Cod dove. That evening, another aircraft made a run—swooping down with a zero angle on the bow. 
+                Two more bombs, <em>"larger and/or closer than the other two earlier."</em> The CO noted dryly: 
+                <em>"Nips apparently know we are here."</em>
+            </p>
+            <p>
+                Despite the attention, Cod rendezvoused with <em>Hawkbill</em> that night. The two submarines exchanged 
+                Loran charts, wolf pack information—and <strong>movies</strong>.
+            </p>
+            
+            <h3>Boarding Party Stranded (August 1)</h3>
+            <div class="highlight danger">
+                At 0830 on <strong>August 1</strong>, Cod came alongside a junk carrying army blankets, knapsacks, 
+                and canvas tarpaulins. A boarding party went aboard to inspect. Fourteen minutes later, a fighter 
+                plane appeared, headed straight for them.
+            </div>
+            <p>
+                Cod dove as soon as topside was cleared—but <strong>one officer, four men, and their Chinese 
+                interpreter</strong> were still aboard the junk. Before the CO started down the hatch, 
+                <em>"a burst of machine gun fire was heard by all hands in the conning tower (as well as by 
+                the COD and the C.O. on the bridge!)."</em> As Cod passed fifty feet, they heard bullets from 
+                a <strong>second strafing run</strong> hitting the water above them. She leveled off at sixty 
+                feet—the charted depth—and headed east, trying for fifteen fathoms.
+            </p>
+            <p>
+                That evening at 1830, the Gunnery Officer dug a Japanese <strong>20mm slug</strong> out of the 
+                superstructure. Inspection revealed evidence of <strong>10 or 12 hits</strong>. Cod had been 
+                strafed, and the enemy had found his mark.
+            </p>
+            <p>
+                As darkness fell, Cod began searching for her lost men. At 2003 she closed the beach to 
+                investigate an anchored junk—but it wasn't theirs. At 2110 she began firing Very star flares 
+                every ten minutes, hoping the signalman striker aboard would see them and flash back with 
+                the flashlights the boarding party carried.
+            </p>
+            <p>
+                By <strong>August 2</strong>, Blenny was coordinating the search. The CO took a creative approach: 
+                finding an English-speaking native from a nearby junk, he sent the man ashore at a fishing village 
+                to ask for information—holding the junk <em>"as insurance of his compliance."</em> At 2130, 
+                800 yards from beach, they put the man over in the junk's lifeboat, which promptly swamped.
+            </p>
+            <p>
+                That night, the CO's worry crept into the log: <em>"Until dark tonight there seemed to be little 
+                doubt that we would at any moment find our missing shipmates. They were, individually, and as a 
+                group, experienced, capable and full of common sense."</em> He noted they were well-armed—one 
+                Thompson, one carbine, four pistols, and each man had a sheath knife. A pre-arranged rendezvous 
+                point five miles south of Pulo Tenggol had been understood <em>"in case of just such an 
+                occurrence."</em> Cod returned there after each search along the beach. <em>"Am now beginning 
+                to be apprehensive,"</em> the CO admitted, <em>"and will try to calmly write down an 'estimate 
+                of the situation'."</em>
+            </p>
+            <div class="highlight info">
+                <strong>The CO's Estimate:</strong> He methodically worked through the possibilities. Ashore and 
+                free? Unlikely—they would have signaled. Prisoners ashore? Unlikely—few Japanese in the area. 
+                Aboard another vessel? Would have seen some sign. Still in the original junk? <em>"This is the 
+                most logical assumption. Wind and current have been from south southwest and could carry them far. 
+                It would be difficult, tedious and slow work to beat back south."</em> The worst case: the plane 
+                had spotted them and sent an escort vessel to investigate. <em>"This is the worst possibility and, 
+                unhappily, the second most logical."</em>
+            </div>
+            <p>
+                At 1157 on <strong>August 3</strong>, Blenny's periscope spotted a large three-masted reddish-brown 
+                junk near Pulo Kapas. The log records: <em>"Junk shows white patch on leech of mainsail in conformance 
+                with description given by COD... Breathed a fervent prayer that this was it and not just a fancied 
+                resemblance."</em>
+            </p>
+            <p>
+                At 1226, closing at flank speed: <em>"Can see junk is luffing up, can see people moving on deck, 
+                can see something white moving about (the white dog COD described). Boy oh boy are we happy."</em> 
+                A minute later, they had communication with the boarding party, who were <em>"anxious to make sure 
+                we know who they are."</em>
+            </p>
+            <p>
+                By 1234, Blenny was alongside. The party came aboard: <strong>Lt.(jg) Franklin S. Kimball</strong> 
+                (an old shipmate of Blenny's CO) in charge, plus Babick, McKnight, Tolle, Kinfroe, and <strong>See 
+                Tone</strong>, the Chinese interpreter. <em>"All men were in perfect shape and considerably more 
+                composed than most of our crew, who were outwardly exceedingly jubilant."</em>
+            </p>
+            <p>
+                The log adds a touching detail: Blenny was so happy at finding the survivors that instead of 
+                sinking the junk, they <em>"gave junk crew canned goods and fresh bread... in accordance with 
+                sentiments of boarding party."</em> After <strong>48 hours</strong> adrift, all hands returned 
+                in good health.
+            </p>
+            
+            <h3>The "Francis Drake" Connection (August 3)</h3>
+            <div class="highlight info">
+                On the same morning the boarding party was rescued, Cod's log records a mysterious entry: 
+                at <strong>0600 on August 3</strong>, Cod <em>"Received Lieutenant F.B.K. DRAKE, R.A.N.V.R. 
+                as passenger, and 40 rounds of 40mm ammunition from BOARFISH."</em>
+            </div>
+            <p>
+                This cryptic entry connects to a covert operation conducted by <strong>USS Cobia</strong>. 
+                On <strong>July 27, 1945</strong>, Cobia landed a party on the west coast of Java consisting 
+                of <strong>four Javanese Muslim commandos</strong> and their handler—Australian intelligence 
+                officer <strong>Lieutenant (SP) Francis Bernard Kington Drake, R.A.N.V.R.</strong> 
+                Remarkably, his name was genuine rather than a cover identity—he happened to share a name 
+                with the famous Elizabethan naval raider.
+            </p>
+            <p>
+                Drake was a member of <strong>Secret Intelligence Australia (SIA)</strong>—Section "B" of 
+                the Allied Intelligence Bureau, a British unit that reported directly to MI6 in London. 
+                SIA worked closely with Netherlands Forces Intelligence and specialized in covert operations 
+                in the Dutch East Indies. Drake was later 
+                <a href="https://www.awm.gov.au/collection/R1573758" target="_blank" rel="noopener">recommended 
+                for the Member of the Order of the British Empire (MBE)</a>.
+            </p>
+            <p>
+                The commandos remained ashore to conduct operations behind Japanese lines; their fate is unknown. 
+                After completing the landing, Drake was extracted through a chain of submarines: Cobia transferred 
+                him to USS <strong>Boarfish</strong> on August 2, and Boarfish passed him to USS 
+                <strong>Cod</strong> the following morning. Cod thus played a role in this Allied intelligence 
+                operation, serving as the final link in the covert extraction chain.
+            </p>
+            <p>
+                <em>Cobia's patrol report for this period was reclassified as <strong>SECRET</strong> on 
+                October 8, 1945—unusual for an otherwise uneventful patrol—specifically because of this 
+                covert operation.</em>
+            </p>
+            
+            <h3>The "Kamikaze Convoy" (July 19-20)</h3>
+            <p>
+                Before the junk operations, Cod participated in a frustrating chase of a convoy that seemed 
+                supernaturally lucky. After three submarines fired torpedoes at the convoy without success, 
+                Cod's radar failed at the worst possible moment. The CO wrote with dark humor:
+            </p>
+            <div class="highlight info">
+                <em>"A wonderful thing has happened! Our radar just went out! Couldn't possibly have picked 
+                a more critical moment... That KAMIKAZE must carry a good luck charm or pray to his gods 
+                regularly. Today he has dodged torpedoes fired by three submarines, requested and received 
+                a rain squall, and has cast a spell over our radar. He hasn't been touched!"</em>
+            </div>
+            
+            <h3>Junk Hunting in the Gulf of Siam (July 21 – August 1)</h3>
+            <p>
+                The bulk of Patrol 7's combat action consisted of 12 successive days of gun attacks on enemy 
+                cargo-carrying junks and motor sampans in the <strong>Gulf of Siam</strong>, near Pulo Tenggol 
+                off the coast of Malaya. Cod sank <strong>23 junks and motor sampans plus one oil barge</strong>, 
+                totaling 2,200 tons of enemy cargo including rice, sugar, oil, crude rubber, and army supplies. 
+                Boarding parties inspected each vessel, confiscated papers, and ensured native crews could safely 
+                abandon ship before opening fire.
+            </p>
+            <p>
+                On <strong>July 26</strong>, Cod took aboard a volunteer Chinese crew member named <strong>Thomas 
+                See</strong>, who spoke English and lived in Singapore. He proved invaluable as an interpreter 
+                during subsequent boardings, supplementing the Gunnery Officer's "dictionary-acquired linguistic 
+                ability."
+            </p>
+            
+            <h3>Dawn Raid with Blenny (July 27)</h3>
+            <p>
+                In a coordinated attack with USS Blenny, Cod approached an anchored fleet of 12 vessels at dawn 
+                near Pulo Kapas. After firing .50 caliber bursts to wake native crews and allow them to abandon 
+                ship, both submarines opened fire with 5-inch and 40mm guns—<strong>7 vessels confirmed sunk</strong> 
+                between them. Throughout this period, Cod was <strong>bombed twice</strong> while diving after 
+                sinking junks, with bombs landing progressively closer each time.
+            </p>
+            
+            <h3>Rendezvous with USS Chub (August 7)</h3>
+            <p>
+                Enroute to Fremantle on <strong>August 7</strong>, Cod sighted a periscope at 1927 and exchanged 
+                recognition signals with USS <strong>Chub</strong> (SS-329). Chub needed ammunition. By 2100, 
+                Cod had rigged a breeches buoy for transfer—<em>"strictly a ship's force job"</em>—heading into 
+                a force 3 sea on a steady course while Chub kept station 40-60 yards abeam. By 2232, they had 
+                passed across <strong>35 rounds of 5-inch, 48 rounds of 40mm, movies, and mail</strong>. 
+                <em>"Our jury-rig has worked fine."</em> At 2235, Cod bid Chub goodbye and set course for 
+                Lombok Strait.
+            </p>
+
+            <h3>The War Is Over (August 11)</h3>
+            <div class="highlight success">
+                Two days out of Fremantle, Cod received the news: <strong>Japan had agreed to surrender</strong>. 
+                Emperor Hirohito had accepted the Potsdam Declaration on August 10; word reached the fleet the 
+                following day. As Commander Westbrook later recalled, they learned the war was over while still 
+                at sea. Cod's seventh patrol would be her last combat mission.
+            </div>
+
+            <h3>End of Patrol</h3>
+            <p>
+                Cod arrived at <strong>Fremantle on August 13, 1945</strong>, ending her seventh and final war 
+                patrol.
+            <p>
+                She would go on to serve in the peacetime Navy until 1954, later becoming a reserve 
+                training vessel. Today, USS Cod is preserved as a <strong>National Historic Landmark</strong> 
+                in Cleveland, Ohio—one of the best-preserved WWII fleet submarines in existence.
+            </p>
+        </section>
+        
+        <hr>
+        
+        <!-- STATISTICS SUMMARY -->
+        <section id="statistics">
+            <h2>Statistical Summary — All Seven Patrols</h2>
+            
+            <table class="stats-table">
+                <thead>
+                    <tr>
+                        <th>Patrol</th>
+                        <th>Duration</th>
+                        <th>Days in Area</th>
+                        <th>Ships Sunk</th>
+                        <th>Personnel Lost</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1st</td>
+                        <td>63 days</td>
+                        <td>47</td>
+                        <td>1 (~5,000 tons)</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>2nd</td>
+                        <td>62 days</td>
+                        <td>45</td>
+                        <td>2 (~9,800 tons)</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>3rd</td>
+                        <td>56 days</td>
+                        <td>43</td>
+                        <td>1 DD + 3 AK (~21,500 tons)</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>4th</td>
+                        <td>53 days</td>
+                        <td>38</td>
+                        <td>4 (~8,500 tons)</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>5th</td>
+                        <td>63 days</td>
+                        <td>45</td>
+                        <td>3 (~15,000 tons)</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>6th</td>
+                        <td>51 days</td>
+                        <td>38</td>
+                        <td>1 (minesweeper)</td>
+                        <td class="kia">1 (KIA)</td>
+                    </tr>
+                    <tr>
+                        <td>7th</td>
+                        <td>49 days</td>
+                        <td>35</td>
+                        <td>24 (junks, by gunfire)</td>
+                        <td>0</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p style="font-size: 0.9rem; color: var(--text-muted); text-align: center;">
+                <em>Tonnage figures are approximate, based on patrol report assessments. 
+                Official JANAC credit: ~27,000 tons.</em>
+            </p>
+            
+            <h3>Commanding Officers</h3>
+            <ul class="co-list">
+                <li><strong>Patrols 1–3:</strong> Commander James C. Dempsey, USN</li>
+                <li><strong>Patrols 4–6:</strong> Commander James A. Adkins, USN</li>
+                <li><strong>Patrol 7:</strong> Lt. Commander Edwin M. Westbrook Jr., USN</li>
+            </ul>
+        </section>
+        
+        <hr>
+        
+        <p style="text-align: center; color: var(--text-muted); font-style: italic;">
+            These seven patrols established USS Cod's combat record during the most intensive period of the 
+            Pacific submarine campaign. From a green boat on her first patrol to a battle-tested veteran, 
+            Cod and her crew learned hard lessons about torpedo reliability, convoy tactics, and the art 
+            of submarine warfare in contested waters.
+        </p>
+    </div>
+    
+    <footer>
+        USS Cod (SS-224) • Gato-class submarine • Commissioned June 1943<br>
+        <a href="/">Return to Search</a> · <a href="/about">About This Archive</a> · <a href="/static/patrol_tracks.html" target="_blank">Patrol Maps</a>
+    </footer>
+</body>
+</html>
+
+
+

@@ -1,0 +1,127 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "macclesfield_bank",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [114.333, 15.75],
+          [114.5, 16.0],
+          [114.8, 16.4],
+          [115.1, 16.75],
+          [115.333, 16.7],
+          [115.3, 16.3],
+          [115.2, 15.9],
+          [115.0, 15.75],
+          [114.333, 15.75]
+        ]]
+      },
+      "properties": {
+        "name": "Macclesfield Bank",
+        "type": "submerged_atoll",
+        "description": "Elongated submerged atoll, 130 km long x 70 km wide. Entirely underwater with depths of 11-100 meters. Dangerous to navigation.",
+        "depth_meters": "11-100",
+        "hazard_level": "high",
+        "historical_note": "Hazardous area during WWII submarine operations"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "dangerous_ground",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [113.0, 7.5],
+          [113.0, 12.0],
+          [117.0, 12.0],
+          [117.0, 7.5],
+          [113.0, 7.5]
+        ]]
+      },
+      "properties": {
+        "name": "Dangerous Ground (Spratly Area)",
+        "type": "hazard_zone",
+        "description": "Large area with numerous low islands, cays, sunken reefs, and atolls. Poorly charted. Reefs rise abruptly from depths >1000m.",
+        "area_nm2": "52000",
+        "hazard_level": "extreme",
+        "historical_note": "Major navigation hazard for WWII submarines. Many uncharted shoals and reefs."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "scarborough_shoal",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [117.75, 15.15]
+      },
+      "properties": {
+        "name": "Scarborough Shoal (Huangyan Island)",
+        "type": "reef",
+        "description": "Triangular-shaped coral reef. Completely submerged at high tide.",
+        "hazard_level": "high",
+        "historical_note": "Navigation hazard west of Luzon"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "paracel_islands",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [111.0, 15.5],
+          [111.0, 17.2],
+          [112.8, 17.2],
+          [112.8, 15.5],
+          [111.0, 15.5]
+        ]]
+      },
+      "properties": {
+        "name": "Paracel Islands (Xisha Islands)",
+        "type": "island_group",
+        "description": "Group of islands, reefs, banks and shoals. Strategic area during WWII.",
+        "hazard_level": "medium",
+        "historical_note": "Japanese-occupied during WWII"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "pratas_reef",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [116.72, 20.7]
+      },
+      "properties": {
+        "name": "Pratas Reef (Dongsha)",
+        "type": "atoll",
+        "description": "Circular atoll approximately 2.8 km across. Japanese seaplane base during WWII.",
+        "hazard_level": "medium",
+        "historical_note": "Japanese military installation, target area for Allied submarines"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "reed_bank",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [116.0, 10.5],
+          [116.0, 11.8],
+          [117.5, 11.8],
+          [117.5, 10.5],
+          [116.0, 10.5]
+        ]]
+      },
+      "properties": {
+        "name": "Reed Bank (Recto Bank)",
+        "type": "submerged_atoll",
+        "description": "Large tablemount in the Spratly Islands area. Shallow waters.",
+        "hazard_level": "high",
+        "historical_note": "Navigation hazard in patrol areas"
+      }
+    }
+  ]
+}
+
+

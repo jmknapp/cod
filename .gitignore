@@ -1,0 +1,21 @@
+# API Keys and secrets
+google-vision-key.json
+*.pem
+*.key
+.env
+
+# Python virtual environment
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# OS files
+.DS_Store
+Thumbs.db
+

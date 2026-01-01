@@ -1,0 +1,115 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "manila_hongkong_lane",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [120.95, 14.58],
+          [119.5, 15.5],
+          [118.5, 17.0],
+          [115.5, 20.0],
+          [114.17, 22.28]
+        ]
+      },
+      "properties": {
+        "name": "Manila - Hong Kong Shipping Lane",
+        "type": "major_route",
+        "description": "Major WWII shipping route between Manila and Hong Kong. Heavily used by Japanese convoys.",
+        "traffic": "high",
+        "historical_note": "Primary target area for US submarine patrols"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "singapore_manila_lane",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [103.85, 1.28],
+          [106.0, 3.0],
+          [109.0, 5.5],
+          [112.0, 8.0],
+          [115.0, 10.5],
+          [118.0, 12.5],
+          [120.0, 14.0],
+          [120.95, 14.58]
+        ]
+      },
+      "properties": {
+        "name": "Singapore - Manila Shipping Lane",
+        "type": "major_route",
+        "description": "Critical supply route from Singapore through South China Sea to Manila. Japanese convoy route.",
+        "traffic": "very_high",
+        "historical_note": "Vital Japanese supply line, heavily patrolled by Allied submarines 1942-1945"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "formosa_luzon_lane",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [121.0, 25.0],
+          [121.0, 22.0],
+          [120.8, 20.0],
+          [120.5, 18.0],
+          [120.2, 16.0],
+          [120.0, 14.5]
+        ]
+      },
+      "properties": {
+        "name": "Formosa (Taiwan) - Luzon Route",
+        "type": "major_route",
+        "description": "Coastal route along eastern side of South China Sea. Connected Taiwan to Philippines.",
+        "traffic": "high",
+        "historical_note": "Japanese military and supply convoys"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "indochina_singapore_lane",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [107.08, 10.75],
+          [105.0, 8.5],
+          [104.0, 5.0],
+          [103.85, 1.28]
+        ]
+      },
+      "properties": {
+        "name": "Indochina - Singapore Lane",
+        "type": "coastal_route",
+        "description": "Coastal shipping between French Indochina (Vietnam) and Singapore.",
+        "traffic": "medium",
+        "historical_note": "Used for resource transport from Indochina to Japanese-held territories"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "camranh_manila_lane",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [109.18, 11.92],
+          [112.0, 11.5],
+          [115.0, 12.0],
+          [118.0, 13.0],
+          [120.5, 14.3]
+        ]
+      },
+      "properties": {
+        "name": "Cam Ranh Bay - Manila Route",
+        "type": "major_route",
+        "description": "Direct route from major Japanese naval base at Cam Ranh Bay to Manila.",
+        "traffic": "high",
+        "historical_note": "Cam Ranh Bay was major Japanese fleet anchorage. Prime hunting ground for submarines."
+      }
+    }
+  ]
+}
+
+

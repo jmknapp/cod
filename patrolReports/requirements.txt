@@ -1,0 +1,4 @@
+flask>=2.0
+gunicorn>=21.0
+pymupdf>=1.23
+mysql-connector-python>=8.0

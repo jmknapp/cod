@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_4dfd5188d6418aa375d0a18df2002d48 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+    
+                    <style>
+                        .foliumpopup {
+                            margin: auto;
+                        }
+                       .foliumpopup table{
+                            margin: auto;
+                        }
+                        .foliumpopup tr{
+                            text-align: left;
+                        }
+                        .foliumpopup th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+    
+                    <style>
+                        .foliumpopup {
+                            margin: auto;
+                        }
+                       .foliumpopup table{
+                            margin: auto;
+                        }
+                        .foliumpopup tr{
+                            text-align: left;
+                        }
+                        .foliumpopup th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+    
+                    <style>
+                        .foliumpopup {
+                            margin: auto;
+                        }
+                       .foliumpopup table{
+                            margin: auto;
+                        }
+                        .foliumpopup tr{
+                            text-align: left;
+                        }
+                        .foliumpopup th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+</head>
+<body>
+    
+    
+    <div style="position: fixed; 
+                top: 10px; left: 50px; width: 400px; height: 90px; 
+                background-color: white; border:2px solid grey; z-index:9999; 
+                font-size:14px; padding: 10px">
+    <h4 style="margin:0">South China Sea Nautical Features</h4>
+    <p style="margin:5px 0">Preview of GeoJSON overlays for USS Cod patrol map</p>
+    <p style="margin:5px 0; font-size:11px; color:#666">
+    Click features for details. Use layer control (top right) to toggle layers.
+    </p>
+    </div>
+    
+    
+            <div class="folium-map" id="map_4dfd5188d6418aa375d0a18df2002d48" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_4dfd5188d6418aa375d0a18df2002d48 = L.map(
+                "map_4dfd5188d6418aa375d0a18df2002d48",
+                {
+                    center: [12.0, 116.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 5,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_aa9e0514e4b68fcbb0d39356972ca728 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_aa9e0514e4b68fcbb0d39356972ca728.addTo(map_4dfd5188d6418aa375d0a18df2002d48);
+        
+    
+            var feature_group_0c518dd3b606eb35ce332bef8ea179bf = L.featureGroup(
+                {
+}
+            );
+        
+    
+        function geo_json_c4df970b75ab77fcc31925be64131af7_styler(feature) {
+            switch(feature.id) {
+                case "macclesfield_bank": case "scarborough_shoal": case "reed_bank": 
+                    return {"color": "#8b6f47", "dashArray": null, "fillColor": "#d4a373", "fillOpacity": 0.25, "weight": 2};
+                case "dangerous_ground": 
+                    return {"color": "#c0392b", "dashArray": "5, 5", "fillColor": "#e74c3c", "fillOpacity": 0.25, "weight": 2};
+                default:
+                    return {"color": "#d68910", "dashArray": null, "fillColor": "#f39c12", "fillOpacity": 0.25, "weight": 2};
+            }
+        }
+
+        function geo_json_c4df970b75ab77fcc31925be64131af7_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_c4df970b75ab77fcc31925be64131af7 = L.geoJson(null, {
+                onEachFeature: geo_json_c4df970b75ab77fcc31925be64131af7_onEachFeature,
+            
+                style: geo_json_c4df970b75ab77fcc31925be64131af7_styler,
+            ...{
+}
+        });
+
+        function geo_json_c4df970b75ab77fcc31925be64131af7_add (data) {
+            geo_json_c4df970b75ab77fcc31925be64131af7
+                .addData(data);
+        }
+            geo_json_c4df970b75ab77fcc31925be64131af7_add({"features": [{"geometry": {"coordinates": [[[114.333, 15.75], [114.5, 16.0], [114.8, 16.4], [115.1, 16.75], [115.333, 16.7], [115.3, 16.3], [115.2, 15.9], [115.0, 15.75], [114.333, 15.75]]], "type": "Polygon"}, "id": "macclesfield_bank", "properties": {"depth_meters": "11-100", "description": "Elongated submerged atoll, 130 km long x 70 km wide. Entirely underwater with depths of 11-100 meters. Dangerous to navigation.", "hazard_level": "high", "historical_note": "Hazardous area during WWII submarine operations", "name": "Macclesfield Bank", "type": "submerged_atoll"}, "type": "Feature"}, {"geometry": {"coordinates": [[[113.0, 7.5], [113.0, 12.0], [117.0, 12.0], [117.0, 7.5], [113.0, 7.5]]], "type": "Polygon"}, "id": "dangerous_ground", "properties": {"area_nm2": "52000", "description": "Large area with numerous low islands, cays, sunken reefs, and atolls. Poorly charted. Reefs rise abruptly from depths \u003e1000m.", "hazard_level": "extreme", "historical_note": "Major navigation hazard for WWII submarines. Many uncharted shoals and reefs.", "name": "Dangerous Ground (Spratly Area)", "type": "hazard_zone"}, "type": "Feature"}, {"geometry": {"coordinates": [117.75, 15.15], "type": "Point"}, "id": "scarborough_shoal", "properties": {"description": "Triangular-shaped coral reef. Completely submerged at high tide.", "hazard_level": "high", "historical_note": "Navigation hazard west of Luzon", "name": "Scarborough Shoal (Huangyan Island)", "type": "reef"}, "type": "Feature"}, {"geometry": {"coordinates": [[[111.0, 15.5], [111.0, 17.2], [112.8, 17.2], [112.8, 15.5], [111.0, 15.5]]], "type": "Polygon"}, "id": "paracel_islands", "properties": {"description": "Group of islands, reefs, banks and shoals. Strategic area during WWII.", "hazard_level": "medium", "historical_note": "Japanese-occupied during WWII", "name": "Paracel Islands (Xisha Islands)", "type": "island_group"}, "type": "Feature"}, {"geometry": {"coordinates": [116.72, 20.7], "type": "Point"}, "id": "pratas_reef", "properties": {"description": "Circular atoll approximately 2.8 km across. Japanese seaplane base during WWII.", "hazard_level": "medium", "historical_note": "Japanese military installation, target area for Allied submarines", "name": "Pratas Reef (Dongsha)", "type": "atoll"}, "type": "Feature"}, {"geometry": {"coordinates": [[[116.0, 10.5], [116.0, 11.8], [117.5, 11.8], [117.5, 10.5], [116.0, 10.5]]], "type": "Polygon"}, "id": "reed_bank", "properties": {"description": "Large tablemount in the Spratly Islands area. Shallow waters.", "hazard_level": "high", "historical_note": "Navigation hazard in patrol areas", "name": "Reed Bank (Recto Bank)", "type": "submerged_atoll"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_c4df970b75ab77fcc31925be64131af7.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature => {
+        if (feature === null) {
+            return '';
+        } else if (typeof(feature)=='object') {
+            return JSON.stringify(feature);
+        } else {
+            return feature;
+        }
+    }
+    let fields = ["name", "type", "hazard_level"];
+    let aliases = ["Name:", "Type:", "Hazard:"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i]}</th>
+            
+            <td>${handleObject(layer.feature.properties[v])}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "sticky": true,
+  "className": "foliumtooltip",
+});
+                     
+    
+    geo_json_c4df970b75ab77fcc31925be64131af7.bindPopup(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature => {
+        if (feature === null) {
+            return '';
+        } else if (typeof(feature)=='object') {
+            return JSON.stringify(feature);
+        } else {
+            return feature;
+        }
+    }
+    let fields = ["name", "description", "historical_note"];
+    let aliases = ["\u003cb\u003eFeature\u003c/b\u003e:", "\u003cb\u003eDescription\u003c/b\u003e:", "\u003cb\u003eWWII Context\u003c/b\u003e:"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i].toLocaleString()}</th>
+            
+            <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "maxWidth": 350,
+  "className": "foliumpopup",
+});
+                     
+    
+            geo_json_c4df970b75ab77fcc31925be64131af7.addTo(feature_group_0c518dd3b606eb35ce332bef8ea179bf);
+        
+    
+            feature_group_0c518dd3b606eb35ce332bef8ea179bf.addTo(map_4dfd5188d6418aa375d0a18df2002d48);
+        
+    
+            var feature_group_47d038296dbb7de8208f6b640a28848b = L.featureGroup(
+                {
+}
+            );
+        
+    
+        function geo_json_2b0a39cb3d6f6248dc968c2dd13ba539_styler(feature) {
+            switch(feature.id) {
+                case "manila_hongkong_lane": case "formosa_luzon_lane": case "camranh_manila_lane": 
+                    return {"color": "#9b59b6", "dashArray": "10, 10", "opacity": 0.6, "weight": 2.5};
+                case "indochina_singapore_lane": 
+                    return {"color": "#9b59b6", "dashArray": "10, 10", "opacity": 0.6, "weight": 2};
+                default:
+                    return {"color": "#9b59b6", "dashArray": "10, 10", "opacity": 0.6, "weight": 3};
+            }
+        }
+
+        function geo_json_2b0a39cb3d6f6248dc968c2dd13ba539_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_2b0a39cb3d6f6248dc968c2dd13ba539 = L.geoJson(null, {
+                onEachFeature: geo_json_2b0a39cb3d6f6248dc968c2dd13ba539_onEachFeature,
+            
+                style: geo_json_2b0a39cb3d6f6248dc968c2dd13ba539_styler,
+            ...{
+}
+        });
+
+        function geo_json_2b0a39cb3d6f6248dc968c2dd13ba539_add (data) {
+            geo_json_2b0a39cb3d6f6248dc968c2dd13ba539
+                .addData(data);
+        }
+            geo_json_2b0a39cb3d6f6248dc968c2dd13ba539_add({"features": [{"geometry": {"coordinates": [[120.95, 14.58], [119.5, 15.5], [118.5, 17.0], [115.5, 20.0], [114.17, 22.28]], "type": "LineString"}, "id": "manila_hongkong_lane", "properties": {"description": "Major WWII shipping route between Manila and Hong Kong. Heavily used by Japanese convoys.", "historical_note": "Primary target area for US submarine patrols", "name": "Manila - Hong Kong Shipping Lane", "traffic": "high", "type": "major_route"}, "type": "Feature"}, {"geometry": {"coordinates": [[103.85, 1.28], [106.0, 3.0], [109.0, 5.5], [112.0, 8.0], [115.0, 10.5], [118.0, 12.5], [120.0, 14.0], [120.95, 14.58]], "type": "LineString"}, "id": "singapore_manila_lane", "properties": {"description": "Critical supply route from Singapore through South China Sea to Manila. Japanese convoy route.", "historical_note": "Vital Japanese supply line, heavily patrolled by Allied submarines 1942-1945", "name": "Singapore - Manila Shipping Lane", "traffic": "very_high", "type": "major_route"}, "type": "Feature"}, {"geometry": {"coordinates": [[121.0, 25.0], [121.0, 22.0], [120.8, 20.0], [120.5, 18.0], [120.2, 16.0], [120.0, 14.5]], "type": "LineString"}, "id": "formosa_luzon_lane", "properties": {"description": "Coastal route along eastern side of South China Sea. Connected Taiwan to Philippines.", "historical_note": "Japanese military and supply convoys", "name": "Formosa (Taiwan) - Luzon Route", "traffic": "high", "type": "major_route"}, "type": "Feature"}, {"geometry": {"coordinates": [[107.08, 10.75], [105.0, 8.5], [104.0, 5.0], [103.85, 1.28]], "type": "LineString"}, "id": "indochina_singapore_lane", "properties": {"description": "Coastal shipping between French Indochina (Vietnam) and Singapore.", "historical_note": "Used for resource transport from Indochina to Japanese-held territories", "name": "Indochina - Singapore Lane", "traffic": "medium", "type": "coastal_route"}, "type": "Feature"}, {"geometry": {"coordinates": [[109.18, 11.92], [112.0, 11.5], [115.0, 12.0], [118.0, 13.0], [120.5, 14.3]], "type": "LineString"}, "id": "camranh_manila_lane", "properties": {"description": "Direct route from major Japanese naval base at Cam Ranh Bay to Manila.", "historical_note": "Cam Ranh Bay was major Japanese fleet anchorage. Prime hunting ground for submarines.", "name": "Cam Ranh Bay - Manila Route", "traffic": "high", "type": "major_route"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_2b0a39cb3d6f6248dc968c2dd13ba539.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature => {
+        if (feature === null) {
+            return '';
+        } else if (typeof(feature)=='object') {
+            return JSON.stringify(feature);
+        } else {
+            return feature;
+        }
+    }
+    let fields = ["name", "traffic"];
+    let aliases = ["Route:", "Traffic Level:"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i]}</th>
+            
+            <td>${handleObject(layer.feature.properties[v])}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "sticky": true,
+  "className": "foliumtooltip",
+});
+                     
+    
+    geo_json_2b0a39cb3d6f6248dc968c2dd13ba539.bindPopup(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature => {
+        if (feature === null) {
+            return '';
+        } else if (typeof(feature)=='object') {
+            return JSON.stringify(feature);
+        } else {
+            return feature;
+        }
+    }
+    let fields = ["name", "description", "historical_note"];
+    let aliases = ["\u003cb\u003eRoute\u003c/b\u003e:", "\u003cb\u003eDescription\u003c/b\u003e:", "\u003cb\u003eWWII Context\u003c/b\u003e:"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i].toLocaleString()}</th>
+            
+            <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "maxWidth": 350,
+  "className": "foliumpopup",
+});
+                     
+    
+            geo_json_2b0a39cb3d6f6248dc968c2dd13ba539.addTo(feature_group_47d038296dbb7de8208f6b640a28848b);
+        
+    
+            feature_group_47d038296dbb7de8208f6b640a28848b.addTo(map_4dfd5188d6418aa375d0a18df2002d48);
+        
+    
+            var feature_group_23399cae4cb2009b15a26a93d741d6e0 = L.featureGroup(
+                {
+}
+            );
+        
+    
+        function geo_json_1a6f85571afa7079d036833a19d0579d_styler(feature) {
+            switch(feature.id) {
+                case "camranh_bay": case "manila_bay": case "subic_bay": 
+                    return {"color": "#c0392b", "fillColor": "#e74c3c", "fillOpacity": 0.6, "radius": 8, "weight": 2};
+                default:
+                    return {"color": "#2980b9", "dashArray": "3, 6", "fillColor": "#3498db", "fillOpacity": 0.2, "weight": 2};
+            }
+        }
+        function geo_json_1a6f85571afa7079d036833a19d0579d_pointToLayer(feature, latlng) {
+            var opts = {
+  "stroke": true,
+  "color": "#3388ff",
+  "weight": 3,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "#3388ff",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 8,
+};
+            
+            let style = geo_json_1a6f85571afa7079d036833a19d0579d_styler(feature)
+            Object.assign(opts, style)
+            
+            return new L.CircleMarker(latlng, opts)
+        }
+
+        function geo_json_1a6f85571afa7079d036833a19d0579d_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_1a6f85571afa7079d036833a19d0579d = L.geoJson(null, {
+                onEachFeature: geo_json_1a6f85571afa7079d036833a19d0579d_onEachFeature,
+            
+                style: geo_json_1a6f85571afa7079d036833a19d0579d_styler,
+                pointToLayer: geo_json_1a6f85571afa7079d036833a19d0579d_pointToLayer,
+            ...{
+}
+        });
+
+        function geo_json_1a6f85571afa7079d036833a19d0579d_add (data) {
+            geo_json_1a6f85571afa7079d036833a19d0579d
+                .addData(data);
+        }
+            geo_json_1a6f85571afa7079d036833a19d0579d_add({"features": [{"geometry": {"coordinates": [[[119.5, 20.0], [119.5, 21.5], [122.0, 21.5], [122.0, 20.0], [119.5, 20.0]]], "type": "Polygon"}, "id": "luzon_strait", "properties": {"description": "Critical passage between South China Sea and Pacific Ocean. Major chokepoint.", "historical_note": "Heavily patrolled by US submarines. Major convoy interdiction area 1942-1945.", "name": "Luzon Strait", "strategic_value": "critical", "type": "strategic_waterway"}, "type": "Feature"}, {"geometry": {"coordinates": [[[116.8, 7.5], [116.8, 8.2], [117.3, 8.2], [117.3, 7.5], [116.8, 7.5]]], "type": "Polygon"}, "id": "balabac_strait", "properties": {"description": "Narrow passage between Palawan and Borneo. Gateway to Sulu Sea.", "historical_note": "Patrol area for submarines targeting traffic between Singapore and Manila", "name": "Balabac Strait", "strategic_value": "high", "type": "strategic_waterway"}, "type": "Feature"}, {"geometry": {"coordinates": [[[120.5, 12.5], [120.5, 13.5], [121.5, 13.5], [121.5, 12.5], [120.5, 12.5]]], "type": "Polygon"}, "id": "mindoro_strait", "properties": {"description": "Passage between Mindoro and Luzon. Approach to Manila Bay.", "historical_note": "Approach to Manila. Heavy Japanese traffic.", "name": "Mindoro Strait (Verde Island Passage)", "strategic_value": "high", "type": "strategic_waterway"}, "type": "Feature"}, {"geometry": {"coordinates": [109.18, 11.92], "type": "Point"}, "id": "camranh_bay", "properties": {"description": "Major Japanese fleet anchorage and naval base on Vietnamese coast.", "historical_note": "Primary Japanese fleet base in South China Sea. Major target for Allied submarines and aircraft.", "name": "Cam Ranh Bay", "strategic_value": "critical", "type": "naval_base"}, "type": "Feature"}, {"geometry": {"coordinates": [120.95, 14.58], "type": "Point"}, "id": "manila_bay", "properties": {"description": "Major port and naval facility. Japanese-occupied 1942-1945.", "historical_note": "Major Japanese supply hub. Liberation target 1945.", "name": "Manila Bay", "strategic_value": "critical", "type": "naval_base"}, "type": "Feature"}, {"geometry": {"coordinates": [120.27, 14.8], "type": "Point"}, "id": "subic_bay", "properties": {"description": "Former US naval base, occupied by Japan 1942-1945.", "historical_note": "Japanese naval facility during occupation", "name": "Subic Bay", "strategic_value": "high", "type": "naval_base"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_1a6f85571afa7079d036833a19d0579d.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature => {
+        if (feature === null) {
+            return '';
+        } else if (typeof(feature)=='object') {
+            return JSON.stringify(feature);
+        } else {
+            return feature;
+        }
+    }
+    let fields = ["name", "type", "strategic_value"];
+    let aliases = ["Name:", "Type:", "Strategic Value:"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i]}</th>
+            
+            <td>${handleObject(layer.feature.properties[v])}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "sticky": true,
+  "className": "foliumtooltip",
+});
+                     
+    
+    geo_json_1a6f85571afa7079d036833a19d0579d.bindPopup(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature => {
+        if (feature === null) {
+            return '';
+        } else if (typeof(feature)=='object') {
+            return JSON.stringify(feature);
+        } else {
+            return feature;
+        }
+    }
+    let fields = ["name", "description", "historical_note"];
+    let aliases = ["\u003cb\u003eLocation\u003c/b\u003e:", "\u003cb\u003eDescription\u003c/b\u003e:", "\u003cb\u003eWWII Context\u003c/b\u003e:"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i].toLocaleString()}</th>
+            
+            <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "maxWidth": 350,
+  "className": "foliumpopup",
+});
+                     
+    
+            geo_json_1a6f85571afa7079d036833a19d0579d.addTo(feature_group_23399cae4cb2009b15a26a93d741d6e0);
+        
+    
+            feature_group_23399cae4cb2009b15a26a93d741d6e0.addTo(map_4dfd5188d6418aa375d0a18df2002d48);
+        
+    
+            var layer_control_93b6bc8e04f53451be111fa9af54447d_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_aa9e0514e4b68fcbb0d39356972ca728,
+                },
+                overlays :  {
+                    "\ud83c\udf0a Ocean Features" : feature_group_0c518dd3b606eb35ce332bef8ea179bf,
+                    "\ud83d\udea2 Shipping Lanes (WWII)" : feature_group_47d038296dbb7de8208f6b640a28848b,
+                    "\u2693 Strategic Areas" : feature_group_23399cae4cb2009b15a26a93d741d6e0,
+                },
+            };
+            let layer_control_93b6bc8e04f53451be111fa9af54447d = L.control.layers(
+                layer_control_93b6bc8e04f53451be111fa9af54447d_layers.base_layers,
+                layer_control_93b6bc8e04f53451be111fa9af54447d_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_4dfd5188d6418aa375d0a18df2002d48);
+
+        
+</script>
+</html>
