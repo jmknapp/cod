@@ -144,3 +144,4 @@ This project makes historical U.S. Navy documents accessible for educational pur
 *"Until dark tonight there seemed to be little doubt that we would at any moment find our missing shipmates. They were, individually, and as a group, experienced, capable and full of common sense."*  
 — USS Cod patrol log, August 2, 1945
 
+
