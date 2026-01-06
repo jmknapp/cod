@@ -372,12 +372,38 @@
         const textArea = document.getElementById('textArea');
         const statsDisplay = document.getElementById('statsDisplay');
         
+        // Patrol date ranges
+        const patrolDates = {
+            1: 'Oct 14 – Dec 16, 1943',
+            2: 'Jan 16 – Mar 5, 1944',
+            3: 'Mar 30 – May 24, 1944',
+            4: 'Jun 18 – Aug 25, 1944',
+            5: 'Sep 18 – Nov 20, 1944',
+            6: 'Mar 24 – May 29, 1945',
+            7: 'Jun 26 – Aug 13, 1945'
+        };
+        
+        function getOrdinal(n) {
+            const s = ['th', 'st', 'nd', 'rd'];
+            const v = n % 100;
+            return n + (s[(v - 20) % 10] || s[v] || s[0]);
+        }
+        
         // Load PDF list
         async function loadPdfList() {
             const response = await fetch('/pdf-list');
             const pdfs = await response.json();
             pdfSelect.innerHTML = '<option value="">Select a report...</option>' +
-                pdfs.map(pdf => `<option value="${pdf}">${pdf.replace('USS_Cod_', '').replace('.pdf', '').replace(/_/g, ' ')}</option>`).join('');
+                pdfs.map(pdf => {
+                    const match = pdf.match(/(\d+)(?:st|nd|rd|th)_Patrol/);
+                    if (match) {
+                        const num = parseInt(match[1]);
+                        const ordinal = getOrdinal(num);
+                        const dates = patrolDates[num] || '';
+                        return `<option value="${pdf}">${ordinal} Patrol (${dates})</option>`;
+                    }
+                    return `<option value="${pdf}">${pdf.replace('USS_Cod_', '').replace('.pdf', '').replace(/_/g, ' ')}</option>`;
+                }).join('');
         }
         
         // Load page data
